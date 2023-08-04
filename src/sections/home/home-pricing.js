@@ -36,7 +36,7 @@ export default function HomePricing() {
     <Stack spacing={3} sx={{ mb: 10, textAlign: 'center' }}>
       <m.div variants={varFade().inUp}>
         <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-          pricing plans
+          Lo mas pedido
         </Typography>
       </m.div>
 
@@ -114,12 +114,12 @@ export default function HomePricing() {
           }}
         >
           <m.div variants={varFade().inDown}>
-            <Typography variant="h4">Still have questions?</Typography>
+            <Typography variant="h4">¿Quieres sabes más?</Typography>
           </m.div>
 
           <m.div variants={varFade().inDown}>
             <Typography sx={{ mt: 2, mb: 5, color: 'text.secondary' }}>
-              Please describe your case to receive the most accurate advice.
+              Por favor escribenos o visita nuestra redes.
             </Typography>
           </m.div>
 
@@ -130,7 +130,7 @@ export default function HomePricing() {
               variant="contained"
               href="mailto:support@minimals.cc?subject=[Feedback] from Customer"
             >
-              Contact us
+              Contáctanos
             </Button>
           </m.div>
         </Box>

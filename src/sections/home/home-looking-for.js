@@ -29,7 +29,7 @@ export default function HomeLookingFor() {
       href={paths.zoneUI}
       endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}
     >
-      Visit Zone Landing Page
+      Ir de compras a Zilex
     </Button>
   );
 
@@ -44,7 +44,7 @@ export default function HomeLookingFor() {
     >
       <m.div variants={varFade().inDown}>
         <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
-          Looking For a
+          Zilex marca Peruana
         </Typography>
       </m.div>
 
@@ -56,7 +56,7 @@ export default function HomeLookingFor() {
             mb: { md: 5 },
           }}
         >
-          Landing Page Template?
+          Buscando ropa a la moda?
         </Typography>
       </m.div>
 

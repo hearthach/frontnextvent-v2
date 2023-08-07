@@ -6278,10 +6278,10 @@
   dependencies:
     "@babel/runtime" "^7.19.4"
 
-"i18next@^23.2.11", "i18next@>= 23.2.3":
-  "integrity" "sha512-MA4FsxOjyCaOZtRDB4yuwjCvqYEioD4G4LlXOn7SO3rnQUlxTufyLsOqfL9MKakeLRBkefe8bqcs0D6Z/xFk1w=="
-  "resolved" "https://registry.npmjs.org/i18next/-/i18next-23.2.11.tgz"
-  "version" "23.2.11"
+"i18next@^23.4.1", "i18next@>= 23.2.3":
+  "integrity" "sha512-07ekE7hbUrbxTYj97VnBzyhKcGURTJC9p4iWTwCVC8t63T+YrgqQmb/n1LBQMivZYwR61pqS+PC0G2rtENycyQ=="
+  "resolved" "https://registry.npmjs.org/i18next/-/i18next-23.4.1.tgz"
+  "version" "23.4.1"
   dependencies:
     "@babel/runtime" "^7.22.5"
 
@@ -8903,10 +8903,10 @@
   "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.45.1.tgz"
   "version" "7.45.1"
 
-"react-i18next@^13.0.2":
-  "integrity" "sha512-NEVxC32v0oR4egwYM0QM0WE93AiJG5r0NTXTL8mhQfAhsMfDS2fSO6jpluyfsfypP988KzUQrAXncspcJ7+GHA=="
-  "resolved" "https://registry.npmjs.org/react-i18next/-/react-i18next-13.0.2.tgz"
-  "version" "13.0.2"
+"react-i18next@^13.0.3":
+  "integrity" "sha512-/t4kt4Y2o+21hbvx+o9zpVnmoiud7KLDncyZFGN0U6TGAWYaXdTsp/ytAHFcKKSAODg4noIMaOO3X7bMgCqLHw=="
+  "resolved" "https://registry.npmjs.org/react-i18next/-/react-i18next-13.0.3.tgz"
+  "version" "13.0.3"
   dependencies:
     "@babel/runtime" "^7.22.5"
     "html-parse-stringify" "^3.0.1"

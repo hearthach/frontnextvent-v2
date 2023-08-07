@@ -55,8 +55,8 @@ export const paths = {
       shorts: {
         root: `/product/category/shorts`,
       },
-      pantalones: {
-        root: `/product/category/pantalones`,
+      jogger: {
+        root: `/product/category/jogger`,
       },
     },
   },

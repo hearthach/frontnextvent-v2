@@ -28,7 +28,8 @@ import { useSettingsContext } from 'src/components/settings';
 //
 import { useCheckoutContext } from '../../checkout/context';
 import CartIcon from '../common/cart-icon';
-import ProductList from '../product-list';
+import ProductList from '../product-list'; // prueba
+// import ProductList from '../../../product-list'; // prueba
 import ProductSort from '../product-sort';
 import ProductSearch from '../product-search';
 import ProductFilters from '../product-filters';
@@ -46,7 +47,7 @@ const defaultFilters = {
 
 // ----------------------------------------------------------------------
 
-export default function ProductShopView() {
+export default function ProductPolosShopView() {
   const settings = useSettingsContext();
 
   const checkout = useCheckoutContext();

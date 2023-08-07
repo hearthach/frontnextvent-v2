@@ -15,17 +15,17 @@ export default function MaintenanceView() {
   return (
     <Stack sx={{ alignItems: 'center' }}>
       <Typography variant="h3" sx={{ mb: 2 }}>
-        Website currently under maintenance
+        Sitio web actualmente en mantenimiento.
       </Typography>
 
       <Typography sx={{ color: 'text.secondary' }}>
-        We are currently working hard on this page!
+        ¡Estamos trabajando arduamente en esta página en este momento!
       </Typography>
 
       <MaintenanceIllustration sx={{ my: 10, height: 240 }} />
 
       <Button component={RouterLink} href="/" size="large" variant="contained">
-        Go to Home
+        Ir a Inicio
       </Button>
     </Stack>
   );

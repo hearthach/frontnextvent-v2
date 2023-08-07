@@ -97,6 +97,7 @@ export default function ProductItem({ product }) {
           alt={name}
           src={coverUrl}
           ratio="1/1"
+          // preload
           sx={{
             borderRadius: 1.5,
             ...(!available && {

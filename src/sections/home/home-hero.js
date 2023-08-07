@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 // routes
 import { paths } from 'src/routes/paths';
 // hooks
@@ -23,6 +24,8 @@ import { HEADER } from 'src/layouts/config-layout';
 import Iconify from 'src/components/iconify';
 import { RouterLink } from 'src/routes/components';
 import { MotionContainer, varFade } from 'src/components/animate';
+// _mock
+import { _socials } from 'src/_mock';
 
 // ----------------------------------------------------------------------
 
@@ -188,7 +191,7 @@ export default function HomeHero() {
           Online
         </Typography>
       </m.div>
-
+      
       {/* 2-titulo zilex     */}
       <m.div variants={varFade().in}>
         <StyledTextGradient
@@ -207,7 +210,7 @@ export default function HomeHero() {
       {/* 3-descripcion */}
       <m.div variants={varFade().in}>
         <Typography variant="body2" sx={{ textAlign: 'center' }}>
-        Experimenta la comodidad y calidad con lo mejores diseños urbanos.
+          Experimenta la comodidad y calidad con lo mejores diseños urbanos.
         </Typography>
       </m.div>
       
@@ -220,25 +223,22 @@ export default function HomeHero() {
           justifyContent="center"
           sx={{ my: 3 }}
         >
-          Dale clic a:
-          {/* Posiblemente se elimine */}
-          {/* <Rating readOnly value={4.95} precision={0.1} max={5} />
+          <Rating readOnly value={4.95} precision={0.1} max={5} />
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             <Box component="strong" sx={{ mr: 0.5, color: 'text.primary' }}>
               4.96/5
             </Box>
             (99+ reviews)
-          </Typography> */}
+          </Typography>
         </Stack>
       </m.div>
       
-      {/* botones */}
+      {/* 5-botones */}
       <m.div variants={varFade().in}>
         <Stack spacing={1.5} direction={{ xs: 'column-reverse', sm: 'row' }} sx={{ mb: 5 }}>
           <Stack alignItems="center" spacing={2}>
             <Button
               component={RouterLink}
-              // href={paths.dashboard.root}
               href={paths.contact}
               color="inherit"
               size="large"
@@ -255,7 +255,11 @@ export default function HomeHero() {
               target="_blank"
               rel="noopener"
               href={paths.freeUI}
-              sx={{ textDecoration: 'underline', display: 'inline-flex', alignItems: 'center' }}
+              sx={{
+                textDecoration: 'underline',
+                display: 'inline-flex',
+                alignItems: 'center',
+              }}
             >
               <Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />
               Get Free Version
@@ -269,56 +273,44 @@ export default function HomeHero() {
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
             target="_blank"
             rel="noopener"
-            // href={paths.figma}
-            href={paths.product.root}
+            href={paths.figma}
             sx={{ borderColor: 'text.primary' }}
           >
             Compra Ahora
           </Button>
         </Stack>
       </m.div>
-
-      {/* Siguenos */}
-      <Stack spacing={3} sx={{ textAlign: 'center', opacity: 0.48 }}>
-        <m.div variants={varFade().in}>
-          <Typography variant="overline">Siguenos en la Redes</Typography>
-        </m.div>
-
-        {/* <Stack spacing={2} direction="row" justifyContent="center">
-          {['figma', 'js', 'ts', 'nextjs'].map((platform) => (
-            <m.div key={platform} variants={varFade().in}>
-              <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
-            </m.div>
-          ))}
-        </Stack> */}        
-      </Stack>
       
-      {/* Botones de redes */}
-      <m.div variants={varFade().in}>
-      <Stack
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
+      {/* 6-Siguenos */}
+      <Stack spacing={3} sx={{ textAlign: 'center' }}>
+        <m.div variants={varFade().in}>
+          <Typography variant="overline" sx={{ opacity: 0.4 }}>
+            Siguenos en la Redes
+          </Typography>
+        </m.div>
+        
+        {/* botones de redes sociales */}
+        <Stack
+          direction="row"
+          spacing={1.5}
+          justifyContent="center"
+          sx={{ mt: 1 }}
+        >
+          {_socials.map((social) => (
+            <IconButton
+              key={social.name}
               sx={{
-                mt: 3,
-                mb: { xs: 5, md: 0 },
+                color: social.color,
+                '&:hover': {
+                  bgcolor: alpha(social.color, 0.08),
+                },
               }}
-              >
-              {_socials.map((social) => (
-                <IconButton
-                  key={social.name}
-                  href={social.path}
-                  target="_blank"
-                  sx={{
-                    '&:hover': {
-                      bgcolor: alpha(social.color, 0.08),
-                    },
-                  }}
-                >
-                  <Iconify color={social.color} icon={social.icon} />
-                </IconButton>
-              ))}
+            >
+              <Iconify icon={social.icon} />
+            </IconButton>
+          ))}
+        </Stack>
       </Stack>
-      </m.div>            
 
     </Stack>
   );

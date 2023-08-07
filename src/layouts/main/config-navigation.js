@@ -19,6 +19,11 @@ export const navConfig = [
     path: '/',
   },
   {
+    title: 'About',
+    icon: <Iconify icon="solar:home-2-bold-duotone" />,
+    path: paths.about,
+  },
+  {
     title: 'Tienda',
     path: '/pages',
     icon: <Iconify icon="solar:file-bold-duotone" />,
@@ -74,16 +79,16 @@ export const navConfig = [
       {
         subheader: (
           <a
-            href={paths.product.category.pantalones.root}
+            href={paths.product.category.jogger.root}
             style={subheaderStyle}
             onMouseEnter={(e) => e.target.style.color = '#00A76F'} // Cambia a verde cuando se pase el mouse
             onMouseLeave={(e) => e.target.style.color = 'black'} // Vuelve al color negro cuando se deje de pasar el mouse
           >
-            PANTALONES
+            JOGGER
           </a>
         ),
         items: [
-          { title: 'Pantalones', path: paths.product.category.pantalones.root },
+          { title: 'Jogger', path: paths.product.category.jogger.root },
         ],
       },
     ],

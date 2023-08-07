@@ -36,7 +36,7 @@ export default function Page500() {
         </m.div>
 
         <Button component={RouterLink} href="/" size="large" variant="contained">
-          Go to Home
+          Ir a Inicio
         </Button>
       </MotionContainer>
     </CompactLayout>

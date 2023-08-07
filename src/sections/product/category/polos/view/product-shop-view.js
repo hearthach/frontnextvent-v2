@@ -20,20 +20,20 @@ import {
   PRODUCT_RATING_OPTIONS,
   PRODUCT_CATEGORY_OPTIONS,
 } from 'src/_mock';
+import { _mock } from 'src/_mock'; // Asegúrate de importar _mock correctamente
 // api
 import { useGetProducts, useSearchProducts } from 'src/api/product';
 // components
 import EmptyContent from 'src/components/empty-content';
 import { useSettingsContext } from 'src/components/settings';
 //
-import { useCheckoutContext } from '../../checkout/context';
-import CartIcon from '../common/cart-icon';
-import ProductList from '../product-list'; // prueba
-// import ProductList from '../../../product-list'; // prueba
-import ProductSort from '../product-sort';
-import ProductSearch from '../product-search';
-import ProductFilters from '../product-filters';
-import ProductFiltersResult from '../product-filters-result';
+import { useCheckoutContext } from '../../../../checkout/context';
+import CartIcon from '../../../common/cart-icon';
+import ProductList from '../../../product-list'; // prueba
+import ProductSort from '../../../product-sort';
+import ProductSearch from '../../../product-search';
+import ProductFilters from '../../../product-filters';
+import ProductFiltersResult from '../../../product-filters-result';
 
 // ----------------------------------------------------------------------
 
@@ -70,6 +70,7 @@ export default function ProductPolosShopView() {
     setFilters((prevState) => ({
       ...prevState,
       [name]: value,
+      category: value === 'all' ? defaultFilters.category : value, // agregado
     }));
   }, []);
 
@@ -147,6 +148,8 @@ export default function ProductPolosShopView() {
 
   const renderNotFound = <EmptyContent filled title="No Data" sx={{ py: 10 }} />;
 
+  // const imageUrl = _mock.image.product('polos', 0); // Ejemplo de URL de imagen para el primer producto de la categoría 'polos'
+
   return (
     <Container
       maxWidth={settings.themeStretch ? false : 'lg'}
@@ -162,7 +165,7 @@ export default function ProductPolosShopView() {
           my: { xs: 3, md: 5 },
         }}
       >
-        Compra en Zilex
+        POLOS - Zilex Perú
       </Typography>
 
       <Stack
@@ -179,6 +182,14 @@ export default function ProductPolosShopView() {
       {(notFound || productsEmpty) && renderNotFound}
 
       <ProductList products={dataFiltered} loading={productsLoading} />
+      {/* <ProductList
+        products={dataFiltered.map((product, index) => ({
+          ...product,
+          imageUrl: _mock.image.product(product.category, index),
+        }))}
+        loading={productsLoading}
+      /> */}
+
     </Container>
   );
 }

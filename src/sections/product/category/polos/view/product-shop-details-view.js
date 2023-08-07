@@ -22,13 +22,13 @@ import EmptyContent from 'src/components/empty-content';
 import { useSettingsContext } from 'src/components/settings';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
-import CartIcon from '../common/cart-icon';
-import ProductDetailsReview from '../product-details-review';
-import { ProductDetailsSkeleton } from '../product-skeleton';
-import ProductDetailsSummary from '../product-details-summary';
-import ProductDetailsCarousel from '../product-details-carousel';
-import ProductDetailsDescription from '../product-details-description';
-import { useCheckoutContext } from '../../checkout/context';
+import CartIcon from '../../../common/cart-icon';
+import ProductDetailsReview from '../../../product-details-review';
+import { ProductDetailsSkeleton } from '../../../product-skeleton';
+import ProductDetailsSummary from '../../../product-details-summary';
+import ProductDetailsCarousel from '../../../product-details-carousel';
+import ProductDetailsDescription from '../../../product-details-description';
+import { useCheckoutContext } from '../../../../checkout/context';
 
 // ----------------------------------------------------------------------
 

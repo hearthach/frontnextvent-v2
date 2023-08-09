@@ -283,7 +283,7 @@ export default function ListView() {
 
           <ComponentBlock title="Switch">
             <Paper variant="outlined" sx={{ width: 1 }}>
-              <List subheader={<ListSubheader>Settings</ListSubheader>}>
+              <List subheader={<ListSubheader>Configuración</ListSubheader>}>
                 <ListItemButton>
                   <ListItemIcon>
                     <Iconify icon="ic:baseline-wifi" width={24} />

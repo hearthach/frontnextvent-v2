@@ -57,19 +57,19 @@ export const PRODUCT_STOCK_OPTIONS = [
 export const PRODUCT_PUBLISH_OPTIONS = [
   {
     value: 'published',
-    label: 'Published',
+    label: 'Publicado', // Published, Publicado
   },
   {
     value: 'draft',
-    label: 'Draft',
+    label: 'Borrador', // Draft, Borrador
   },
 ];
 
 export const PRODUCT_SORT_OPTIONS = [
-  { value: 'featured', label: 'Featured' },
-  { value: 'newest', label: 'Newest' },
-  { value: 'priceDesc', label: 'Price: High - Low' },
-  { value: 'priceAsc', label: 'Price: Low - High' },
+  { value: 'featured', label: 'Destacados' }, // Featured
+  { value: 'newest', label: 'Más recientes' }, // Newest
+  { value: 'priceDesc', label: 'Precio: Mayor a Menor' }, // Price: High - Low
+  { value: 'priceAsc', label: 'Precio: Menor a Mayor' }, // Price: Low - High
 ];
 
 export const PRODUCT_CATEGORY_GROUP_OPTIONS = [

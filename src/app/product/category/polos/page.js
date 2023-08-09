@@ -4,7 +4,7 @@ import ProductPolosShopView from "src/sections/product/category/polos/view/produ
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Product: Polos Shop',
+  title: 'Tienda: Polos Shop',
 };
 
 export default function PolosShopPage() {

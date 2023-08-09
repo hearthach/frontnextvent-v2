@@ -13,6 +13,7 @@ import { paths } from 'src/routes/paths';
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
+import Slider from 'react-slick';
 
 // ----------------------------------------------------------------------
 
@@ -64,6 +65,15 @@ export default function HomeLookingFor() {
     </Stack>
   );
 
+  const renderSlider = (
+    <Slider autoplay={true} autoplaySpeed={2500} infinite={true}>
+      <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing-1.webp" />
+      <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing-2.webp" />
+      <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing-3.webp" />
+      {/* Agrega más imágenes según necesites */}
+    </Slider>
+  );
+
   return (
     <Container
       component={MotionViewport}
@@ -78,7 +88,7 @@ export default function HomeLookingFor() {
 
         <Grid xs={12} md={7}>
           <m.div variants={varFade().inUp}>
-            <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing.webp" />
+            {renderSlider}
           </m.div>
         </Grid>
 

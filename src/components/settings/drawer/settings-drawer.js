@@ -43,7 +43,7 @@ export default function SettingsDrawer() {
       sx={{ py: 2, pr: 1, pl: 2.5 }}
     >
       <Typography variant="h6" sx={{ flexGrow: 1 }}>
-        Settings
+        Configuración
       </Typography>
 
       <Tooltip title="Reset">
@@ -63,7 +63,7 @@ export default function SettingsDrawer() {
   const renderMode = (
     <div>
       <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Mode
+        Modo
       </Typography>
 
       <BaseOptions
@@ -78,7 +78,7 @@ export default function SettingsDrawer() {
   const renderContrast = (
     <div>
       <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Contrast
+        Contraste
       </Typography>
 
       <BaseOptions
@@ -93,7 +93,7 @@ export default function SettingsDrawer() {
   const renderDirection = (
     <div>
       <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Direction
+        Posición
       </Typography>
 
       <BaseOptions
@@ -108,7 +108,7 @@ export default function SettingsDrawer() {
   const renderLayout = (
     <div>
       <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Layout
+        Diseño
       </Typography>
 
       <LayoutOptions
@@ -130,7 +130,7 @@ export default function SettingsDrawer() {
           alignItems: 'center',
         }}
       >
-        Stretch
+        Expandir
         <Tooltip title="Only available at large resolutions > 1600px (xl)">
           <Iconify icon="eva:info-outline" width={16} sx={{ ml: 0.5 }} />
         </Tooltip>
@@ -146,7 +146,7 @@ export default function SettingsDrawer() {
   const renderPresets = (
     <div>
       <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Presets
+        Preajustes
       </Typography>
 
       <PresetsOptions

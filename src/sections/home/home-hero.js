@@ -290,24 +290,28 @@ export default function HomeHero() {
         </m.div>
         
         {/* botones de redes sociales */}
-        <Stack
-          direction="row"
-          spacing={1.5}
-          justifyContent="center"
-          sx={{ mt: 1 }}
-        >
+        <Stack direction="row" spacing={1.5} justifyContent="center" sx={{ mt: 1 }}>
           {_socials.map((social) => (
-            <IconButton
+            <Link
               key={social.name}
-              sx={{
-                color: social.color,
-                '&:hover': {
-                  bgcolor: alpha(social.color, 0.08),
-                },
-              }}
+              href={social.path}
+              target="_blank"
+              rel="noopener"
+              underline="none"
+              sx={{ color: 'inherit' }}
             >
-              <Iconify icon={social.icon} />
-            </IconButton>
+              <IconButton
+                // key={social.name}
+                sx={{
+                  color: social.color,
+                  '&:hover': {
+                    bgcolor: alpha(social.color, 0.08),
+                  },
+                }}
+              >
+                <Iconify icon={social.icon} />
+              </IconButton>
+            </Link>
           ))}
         </Stack>
       </Stack>

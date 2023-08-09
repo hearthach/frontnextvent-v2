@@ -57,13 +57,13 @@ export default function HomeView() {
         }}
       >
         {/* 2-Moda */}
-        <HomeMinimal />
+        {/* <HomeMinimal /> */}
 
         {/* Section-About */}
         <AboutTeam />
 
         {/* 8-Pricing */}      
-        <HomePricing />
+        {/* <HomePricing /> */}
 
         {/* 9-Looking */}
         <HomeLookingFor />

@@ -57,7 +57,7 @@ export default function MailList({
       <Stack sx={{ p: 2 }}>
         {mdUp ? (
           <TextField
-            placeholder="Search..."
+            placeholder="Buscar..." // Search
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">

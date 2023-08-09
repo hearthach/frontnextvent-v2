@@ -44,7 +44,7 @@ export default function JobSearch({ query, results, onSearch, hrefItem }) {
       renderInput={(params) => (
         <TextField
           {...params}
-          placeholder="Search..."
+          placeholder="Buscar..." // Search
           onKeyUp={handleKeyUp}
           InputProps={{
             ...params.InputProps,

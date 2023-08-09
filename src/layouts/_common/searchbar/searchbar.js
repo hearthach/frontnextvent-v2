@@ -146,7 +146,7 @@ function Searchbar() {
           <InputBase
             fullWidth
             autoFocus
-            placeholder="Search..."
+            placeholder="Buscar..." // Search
             value={searchQuery}
             onChange={handleSearch}
             startAdornment={

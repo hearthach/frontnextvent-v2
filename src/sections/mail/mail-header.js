@@ -27,7 +27,7 @@ export default function MailHeader({ onOpenNav, onOpenMail, ...other }) {
       <TextField
         fullWidth
         size="small"
-        placeholder="Search..."
+        placeholder="Buscar..." // Search
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">

@@ -25,6 +25,8 @@ import NavDesktop from './nav/desktop';
 //
 import { SettingsButton, HeaderShadow, LoginButton } from '../_common';
 
+import HeaderMessageBanner from 'src/components/carousel/HeaderMessageBanner'; // Importa el nuevo componente
+
 // ----------------------------------------------------------------------
 
 export default function Header() {
@@ -36,6 +38,9 @@ export default function Header() {
 
   return (
     <AppBar>
+      {/* Agrega el componente HeaderMessageBanner */}
+      {/* <HeaderMessageBanner /> */}
+
       <Toolbar
         disableGutters
         sx={{
@@ -73,8 +78,8 @@ export default function Header() {
                 underline="none"
                 sx={{ ml: 1 }}
               >
-                <Label color="info" sx={{ textTransform: 'unset', height: 22, px: 0.5 }}>
-                  v5.3.0
+                <Label color="info" sx={{ textTransform: 'unset', height: 18, px: 0.5 }}>
+                  Perú
                 </Label>
               </Link>
             }
@@ -100,6 +105,7 @@ export default function Header() {
           </Stack>
         </Container>
       </Toolbar>
+      <HeaderMessageBanner />
 
       {offsetTop && <HeaderShadow />}
     </AppBar>

@@ -25,7 +25,7 @@ import NavDesktop from './nav/desktop';
 //
 import { SettingsButton, HeaderShadow, LoginButton } from '../_common';
 
-import HeaderMessageBanner from 'src/components/carousel/HeaderMessageBanner'; // Importa el nuevo componente
+import HeaderMessageBanner from '../../components/carousel/HeaderMessageBanner'; // Importa el nuevo componente
 
 // ----------------------------------------------------------------------
 

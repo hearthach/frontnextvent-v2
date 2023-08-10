@@ -39,7 +39,7 @@ export default function Header() {
   return (
     <AppBar>
       {/* Agrega el componente HeaderMessageBanner */}
-      {/* <HeaderMessageBanner /> */}
+      <HeaderMessageBanner />
 
       <Toolbar
         disableGutters
@@ -105,7 +105,7 @@ export default function Header() {
           </Stack>
         </Container>
       </Toolbar>
-      <HeaderMessageBanner />
+      {/* <HeaderMessageBanner /> */}
 
       {offsetTop && <HeaderShadow />}
     </AppBar>

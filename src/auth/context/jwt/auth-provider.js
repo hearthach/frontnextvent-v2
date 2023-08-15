@@ -97,25 +97,83 @@ export function AuthProvider({ children }) {
   }, [initialize]);
 
   // LOGIN
+  // const login = useCallback(async (email, password) => {
+  //   const data = {
+  //     email,
+  //     password,
+  //   };
+
+  //   const response = await axios.post(endpoints.auth.login, data);
+
+  //   const { accessToken, user } = response.data;
+
+  //   setSession(accessToken);
+
+  //   dispatch({
+  //     type: 'LOGIN',
+  //     payload: {
+  //       user,
+  //     },
+  //   });
+  // }, []);
+
+  // LOGIN-FREDY
+  // const login = useCallback(async (email, password) => {
+  //   const data = {
+  //     email,
+  //     password,
+  //   };
+  
+  //   try {
+  //     const response = await axios.post(endpoints.auth.login, data);
+  
+  //     const { message } = response.data; // Extrae el token del mensaje de la respuesta
+  
+  //     setSession(message); // Llama a setSession con el token
+  
+  //     const userResponse = await axios.get(endpoints.auth.me);
+  //     const { user } = userResponse.data;
+  
+  //     dispatch({
+  //       type: 'LOGIN',
+  //       payload: {
+  //         user,
+  //       },
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }, []);
+
   const login = useCallback(async (email, password) => {
     const data = {
       email,
       password,
     };
-
-    const response = await axios.post(endpoints.auth.login, data);
-
-    const { accessToken, user } = response.data;
-
-    setSession(accessToken);
-
-    dispatch({
-      type: 'LOGIN',
-      payload: {
-        user,
-      },
-    });
+  
+    try {
+      const response = await axios.post(endpoints.auth.login, data);
+  
+      const { message } = response.data; // Cambiado a "message" en lugar de "accessToken"
+  
+      setSession(message); // Llama a setSession con el token
+  
+      // Dado que la respuesta de usuario ha cambiado, necesitas ajustar esto también
+      // Asegúrate de que la respuesta contenga los datos correctos del usuario
+      const userResponse = await axios.get(endpoints.auth.me);
+      const { user } = userResponse.data;
+  
+      dispatch({
+        type: 'LOGIN',
+        payload: {
+          user,
+        },
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }, []);
+  
 
   // REGISTER
   const register = useCallback(async (email, password, firstName, lastName) => {

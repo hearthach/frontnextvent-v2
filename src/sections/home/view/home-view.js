@@ -10,10 +10,10 @@ import MainLayout from 'src/layouts/main';
 import ScrollProgress from 'src/components/scroll-progress';
 //
 import HomeHero from '../home-hero';
-import HomeMinimal from '../home-minimal';
-import HomePricing from '../home-pricing';
 import HomeLookingFor from '../home-looking-for';
-import AboutTeam from 'src/sections/about/about-team';
+import HomeProductCategorias from '../home-product-category';
+import HomeNewProductsCarousel from '../home-new-products';
+import HomeProductsSaleCarousel from '../home-sale-products';
 
 // ----------------------------------------------------------------------
 
@@ -47,7 +47,7 @@ export default function HomeView() {
       <ScrollProgress scrollYProgress={scrollYProgress} />
 
       {/* 1-HomeHero */}
-      <HomeHero />
+      <HomeHero />      
 
       <Box
         sx={{
@@ -56,16 +56,16 @@ export default function HomeView() {
           bgcolor: 'background.default',
         }}
       >
-        {/* 2-Moda */}
-        {/* <HomeMinimal /> */}
+        {/* 2-Para productos nuevos */}
+        <HomeNewProductsCarousel />
 
-        {/* Section-About */}
-        <AboutTeam />
+        {/* 3-Categorias de Productos */}
+        <HomeProductCategorias />
 
-        {/* 8-Pricing */}      
-        {/* <HomePricing /> */}
+        {/* 4-Productos mas Vendidos */}
+        <HomeProductsSaleCarousel />
 
-        {/* 9-Looking */}
+        {/* 5-Banner final */}
         <HomeLookingFor />
       </Box>
     </MainLayout>

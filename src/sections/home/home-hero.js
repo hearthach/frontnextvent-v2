@@ -273,7 +273,7 @@ export default function HomeHero() {
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
             target="_blank"
             rel="noopener"
-            href={paths.figma}
+            href={paths.product.root}
             sx={{ borderColor: 'text.primary' }}
           >
             Compra Ahora

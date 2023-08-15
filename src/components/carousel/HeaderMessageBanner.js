@@ -4,11 +4,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const messages = [
-  '🚚 Envíos a nivel nacional | 🛍️ Nuestras Tiendas | 📴 Síguenos en nuestras Redes Sociales',
-  '🚚 Envíos a nivel nacional | 🛍️ Nuestras Tiendas | 📴 Síguenos en nuestras Redes Sociales',
-  '🚚 Envíos a nivel nacional | 🛍️ Nuestras Tiendas | 📴 Síguenos en nuestras Redes Sociales',
-//   '🛍️ Nuestras Tiendas',
-//   '📴 Síguenos en nuestras Redes Sociales',
+  // '🚚 Envíos a nivel nacional | 🛍️ Nuestras Tiendas | 📴 Síguenos en nuestras Redes Sociales',
+  '🚚 Envíos a nivel nacional',
+  '🛍️ Nuestras Tiendas',
+  '📴 Síguenos en nuestras Redes Sociales',
 ];
 
 const HeaderMessageBanner = () => {
@@ -18,7 +17,7 @@ const HeaderMessageBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % messages.length);
-    }, 1500); // Cambiar cada 5 segundos
+    }, 1500); // Cambiar cada 1.5 segundos
 
     return () => {
       clearInterval(interval);
@@ -27,20 +26,45 @@ const HeaderMessageBanner = () => {
 
   return (
     <Box
-        sx={{
-        position: 'relative', // Cambia a "relative" en lugar de "absolute"
+      sx={{
+        position: 'relative',
         background: theme.palette.primary.main,
         color: theme.palette.primary.contrastText,
+        height: 60,
+        overflow: 'hidden', // Ocultar el contenido que se desborda
+        zIndex: 2000,
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 60, // Ajusta la altura según tus necesidades
-        zIndex: 2000, // Asegura que esté encima de todo
-        // marginBottom: '-8px', // Espacio para separar de la Toolbar
+        justifyContent: 'center', // Centrar horizontalmente
+        alignItems: 'center', // Centrar verticalmente
       }}
-
     >
-      <Typography variant="body1">{messages[currentIndex]}</Typography>
+      <Box
+        sx={{
+          position: 'absolute',
+          display: 'flex',
+          justifyContent: 'start', // Alinear al principio para que los mensajes se desplacen
+          alignItems: 'center',
+          width: '100%', // Ocupar todo el ancho
+          animation: 'marquee 25s linear infinite', // Animación de desplazamiento
+          '@keyframes marquee': {
+            '0%': { transform: 'translateX(100%)' },
+            '100%': { transform: 'translateX(-100%)' },
+          },
+        }}
+      >
+        {messages.map((message, index) => (
+          <Typography
+            key={index}
+            variant="body1"
+            sx={{
+              whiteSpace: 'nowrap', // Evitar saltos de línea
+              padding: '0 16px', // Espacio entre mensajes
+            }}
+          >
+            {message}
+          </Typography>
+        ))}
+      </Box>
     </Box>
   );
 };

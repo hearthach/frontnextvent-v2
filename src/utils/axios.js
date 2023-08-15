@@ -30,8 +30,10 @@ export const endpoints = {
   kanban: '/api/kanban',
   calendar: '/api/calendar',
   auth: {
-    me: '/api/auth/me',
-    login: '/api/auth/login',
+    // me: '/api/auth/me',
+    me: '/api/Inicio/GetUsuarioInicio', // Api Login-Me-Fredy
+    // login: '/api/auth/login',
+    login: '/api/Login/GetTokenLogin', // Api Login Fredy
     register: '/api/auth/register',
   },
   mail: {
@@ -46,7 +48,8 @@ export const endpoints = {
     search: '/api/post/search',
   },
   product: {
-    list: '/api/product/list',
+    // list: '/api/product/list',
+    list: '/api/Productos/GetProductos', // Api Fredy
     details: '/api/product/details',
     search: '/api/product/search',
   },

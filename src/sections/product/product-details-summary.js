@@ -196,7 +196,7 @@ export default function ProductDetailsSummary({
   const renderSizeOptions = (
     <Stack direction="row">
       <Typography variant="subtitle2" sx={{ flexGrow: 1 }}>
-        Size
+        Talla
       </Typography>
 
       <RHFSelect
@@ -228,7 +228,7 @@ export default function ProductDetailsSummary({
   const renderQuantity = (
     <Stack direction="row">
       <Typography variant="subtitle2" sx={{ flexGrow: 1 }}>
-        Quantity
+        Cantidad
       </Typography>
 
       <Stack spacing={1}>
@@ -242,7 +242,7 @@ export default function ProductDetailsSummary({
         />
 
         <Typography variant="caption" component="div" sx={{ textAlign: 'right' }}>
-          Available: {available}
+          Disponible: {available}
         </Typography>
       </Stack>
     </Stack>
@@ -260,11 +260,11 @@ export default function ProductDetailsSummary({
         onClick={handleAddCart}
         sx={{ whiteSpace: 'nowrap' }}
       >
-        Add to Cart
+        Añadir al Carrito
       </Button>
 
       <Button fullWidth size="large" type="submit" variant="contained" disabled={disabledActions}>
-        Buy Now
+        Comprar Ahora
       </Button>
     </Stack>
   );

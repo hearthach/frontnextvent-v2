@@ -6,9 +6,7 @@ export const PRODUCT_GENDER_OPTIONS = [
   { label: 'Kids', value: 'Kids' },
 ];
 
-export const PRODUCT_CATEGORY_OPTIONS = ['Polos', 'Poleras', 'Shorts', 'Jogger'];
-
-// export const PRODUCT_CATEGORY_OPTIONS = ['Shose', 'Apparel', 'Accessories'];
+export const PRODUCT_CATEGORY_OPTIONS = ['Shose', 'Apparel', 'Accessories'];
 
 export const PRODUCT_RATING_OPTIONS = ['up4Star', 'up3Star', 'up2Star', 'up1Star'];
 
@@ -35,7 +33,7 @@ export const PRODUCT_COLOR_NAME_OPTIONS = [
 ];
 
 export const PRODUCT_SIZE_OPTIONS = [
-  { value: '7', label: '7' },
+  { value: 's', label: 'S' },
   { value: '8', label: '8' },
   { value: '8.5', label: '8.5' },
   { value: '9', label: '9' },
@@ -57,19 +55,19 @@ export const PRODUCT_STOCK_OPTIONS = [
 export const PRODUCT_PUBLISH_OPTIONS = [
   {
     value: 'published',
-    label: 'Publicado', // Published, Publicado
+    label: 'Published',
   },
   {
     value: 'draft',
-    label: 'Borrador', // Draft, Borrador
+    label: 'Draft',
   },
 ];
 
 export const PRODUCT_SORT_OPTIONS = [
-  { value: 'featured', label: 'Destacados' }, // Featured
-  { value: 'newest', label: 'Más recientes' }, // Newest
-  { value: 'priceDesc', label: 'Precio: Mayor a Menor' }, // Price: High - Low
-  { value: 'priceAsc', label: 'Precio: Menor a Mayor' }, // Price: Low - High
+  { value: 'featured', label: 'Featured' },
+  { value: 'newest', label: 'Newest' },
+  { value: 'priceDesc', label: 'Price: High - Low' },
+  { value: 'priceAsc', label: 'Price: Low - High' },
 ];
 
 export const PRODUCT_CATEGORY_GROUP_OPTIONS = [

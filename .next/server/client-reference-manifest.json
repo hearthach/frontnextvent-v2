@@ -1,0 +1,727 @@
+{
+  "ssrModuleMapping": {
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/layout-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/home/view/home-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/home/view/home-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Public_Sans\",\"arguments\":[{\"weight\":[\"400\",\"500\",\"600\",\"700\",\"800\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"primaryFont\"}": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Barlow\",\"arguments\":[{\"weight\":[\"900\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"secondaryFont\"}",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Barlow\",\"arguments\":[{\"weight\":[\"900\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"secondaryFont\"}": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Barlow\",\"arguments\":[{\"weight\":[\"900\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"secondaryFont\"}",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/locales/i18n.js": {
+      "*": {
+        "id": "(sc_client)/./src/locales/i18n.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/locales/use-locales.js": {
+      "*": {
+        "id": "(sc_client)/./src/locales/use-locales.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/locales/localization-provider.js": {
+      "*": {
+        "id": "(sc_client)/./src/locales/localization-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/theme/index.js": {
+      "*": {
+        "id": "(sc_client)/./src/theme/index.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/progress-bar/styles.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/progress-bar/styles.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/progress-bar/progress-bar.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/progress-bar/progress-bar.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/animate/motion-lazy.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/animate/motion-lazy.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/snackbar/snackbar-provider.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/snackbar/snackbar-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/settings/context/settings-context.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/settings/context/settings-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/settings/context/settings-provider.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/settings/context/settings-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/settings/drawer/settings-drawer.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/settings/drawer/settings-drawer.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/checkout/context/checkout-context.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/checkout/context/checkout-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/checkout/context/checkout-provider.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/checkout/context/checkout-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/auth/context/jwt/auth-context.js": {
+      "*": {
+        "id": "(sc_client)/./src/auth/context/jwt/auth-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/auth/context/jwt/auth-consumer.js": {
+      "*": {
+        "id": "(sc_client)/./src/auth/context/jwt/auth-consumer.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/auth/context/jwt/auth-provider.js": {
+      "*": {
+        "id": "(sc_client)/./src/auth/context/jwt/auth-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/loading.js": {
+      "*": {
+        "id": "(sc_client)/./src/app/loading.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/error/403-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/error/403-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/error/500-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/error/500-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/error/not-found-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/error/not-found-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/product/layout.js": {
+      "*": {
+        "id": "(sc_client)/./src/app/product/layout.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/view/product-edit-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/view/product-edit-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/view/product-shop-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/view/product-shop-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/view/product-list-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/view/product-list-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/view/product-create-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/view/product-create-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/view/product-details-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/view/product-details-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/view/product-shop-details-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/view/product-shop-details-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/category/polos/view/product-shop-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/category/polos/view/product-shop-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/sections/product/category/poleras/view/product-shop-view.js": {
+      "*": {
+        "id": "(sc_client)/./src/sections/product/category/poleras/view/product-shop-view.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    }
+  },
+  "edgeSSRModuleMapping": {},
+  "clientModules": {
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\home\\view\\home-view.js": {
+      "id": "(app-client)/./src/sections/home/view/home-view.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\simplebar-react\\dist\\simplebar.min.css": {
+      "id": "(app-client)/./node_modules/simplebar-react/dist/simplebar.min.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\yet-another-react-lightbox\\dist\\styles.css": {
+      "id": "(app-client)/./node_modules/yet-another-react-lightbox/dist/styles.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\yet-another-react-lightbox\\dist\\plugins\\captions\\captions.css": {
+      "id": "(app-client)/./node_modules/yet-another-react-lightbox/dist/plugins/captions/captions.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\yet-another-react-lightbox\\dist\\plugins\\thumbnails\\thumbnails.css": {
+      "id": "(app-client)/./node_modules/yet-another-react-lightbox/dist/plugins/thumbnails/thumbnails.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\mapbox-gl\\dist\\mapbox-gl.css": {
+      "id": "(app-client)/./node_modules/mapbox-gl/dist/mapbox-gl.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\react-quill\\dist\\quill.snow.css": {
+      "id": "(app-client)/./node_modules/react-quill/dist/quill.snow.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\slick-carousel\\slick\\slick.css": {
+      "id": "(app-client)/./node_modules/slick-carousel/slick/slick.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\slick-carousel\\slick\\slick-theme.css": {
+      "id": "(app-client)/./node_modules/slick-carousel/slick/slick-theme.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\react-lazy-load-image-component\\src\\effects\\blur.css": {
+      "id": "(app-client)/./node_modules/react-lazy-load-image-component/src/effects/blur.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Public_Sans\",\"arguments\":[{\"weight\":[\"400\",\"500\",\"600\",\"700\",\"800\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"primaryFont\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Public_Sans\",\"arguments\":[{\"weight\":[\"400\",\"500\",\"600\",\"700\",\"800\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"primaryFont\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Barlow\",\"arguments\":[{\"weight\":[\"900\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"secondaryFont\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\theme\\\\typography.js\",\"import\":\"Barlow\",\"arguments\":[{\"weight\":[\"900\"],\"subsets\":[\"latin\"],\"display\":\"swap\",\"fallback\":[\"Helvetica\",\"Arial\",\"sans-serif\"]}],\"variableName\":\"secondaryFont\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\locales\\i18n.js": {
+      "id": "(app-client)/./src/locales/i18n.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\locales\\use-locales.js": {
+      "id": "(app-client)/./src/locales/use-locales.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\locales\\localization-provider.js": {
+      "id": "(app-client)/./src/locales/localization-provider.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\theme\\index.js": {
+      "id": "(app-client)/./src/theme/index.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\progress-bar\\styles.js": {
+      "id": "(app-client)/./src/components/progress-bar/styles.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\progress-bar\\progress-bar.js": {
+      "id": "(app-client)/./src/components/progress-bar/progress-bar.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\animate\\motion-lazy.js": {
+      "id": "(app-client)/./src/components/animate/motion-lazy.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\snackbar\\snackbar-provider.js": {
+      "id": "(app-client)/./src/components/snackbar/snackbar-provider.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\settings\\context\\settings-context.js": {
+      "id": "(app-client)/./src/components/settings/context/settings-context.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\settings\\context\\settings-provider.js": {
+      "id": "(app-client)/./src/components/settings/context/settings-provider.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\components\\settings\\drawer\\settings-drawer.js": {
+      "id": "(app-client)/./src/components/settings/drawer/settings-drawer.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\checkout\\context\\checkout-context.js": {
+      "id": "(app-client)/./src/sections/checkout/context/checkout-context.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\checkout\\context\\checkout-provider.js": {
+      "id": "(app-client)/./src/sections/checkout/context/checkout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\auth\\context\\jwt\\auth-context.js": {
+      "id": "(app-client)/./src/auth/context/jwt/auth-context.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\auth\\context\\jwt\\auth-consumer.js": {
+      "id": "(app-client)/./src/auth/context/jwt/auth-consumer.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\auth\\context\\jwt\\auth-provider.js": {
+      "id": "(app-client)/./src/auth/context/jwt/auth-provider.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\loading.js": {
+      "id": "(app-client)/./src/app/loading.js",
+      "name": "*",
+      "chunks": [
+        "app/loading:static/chunks/app/loading.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\error\\403-view.js": {
+      "id": "(app-client)/./src/sections/error/403-view.js",
+      "name": "*",
+      "chunks": [
+        "app/not-found:static/chunks/app/not-found.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\error\\500-view.js": {
+      "id": "(app-client)/./src/sections/error/500-view.js",
+      "name": "*",
+      "chunks": [
+        "app/not-found:static/chunks/app/not-found.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\error\\not-found-view.js": {
+      "id": "(app-client)/./src/sections/error/not-found-view.js",
+      "name": "*",
+      "chunks": [
+        "app/not-found:static/chunks/app/not-found.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\product\\layout.js": {
+      "id": "(app-client)/./src/app/product/layout.js",
+      "name": "*",
+      "chunks": [
+        "app/product/layout:static/chunks/app/product/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\view\\product-edit-view.js": {
+      "id": "(app-client)/./src/sections/product/view/product-edit-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\view\\product-shop-view.js": {
+      "id": "(app-client)/./src/sections/product/view/product-shop-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\view\\product-list-view.js": {
+      "id": "(app-client)/./src/sections/product/view/product-list-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\view\\product-create-view.js": {
+      "id": "(app-client)/./src/sections/product/view/product-create-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\view\\product-details-view.js": {
+      "id": "(app-client)/./src/sections/product/view/product-details-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\view\\product-shop-details-view.js": {
+      "id": "(app-client)/./src/sections/product/view/product-shop-details-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/page:static/chunks/app/product/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\category\\polos\\view\\product-shop-view.js": {
+      "id": "(app-client)/./src/sections/product/category/polos/view/product-shop-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/category/polos/page:static/chunks/app/product/category/polos/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\sections\\product\\category\\poleras\\view\\product-shop-view.js": {
+      "id": "(app-client)/./src/sections/product/category/poleras/view/product-shop-view.js",
+      "name": "*",
+      "chunks": [
+        "app/product/category/poleras/page:static/chunks/app/product/category/poleras/page.js"
+      ],
+      "async": false
+    }
+  },
+  "entryCSSFiles": {
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\page": [
+      "static/css/app/page.css"
+    ],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\layout": [
+      "static/css/app/layout.css"
+    ],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\loading": [],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\not-found": [],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\product\\layout": [],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\product\\page": [
+      "static/css/app/product/page.css"
+    ],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\product\\category\\polos\\page": [],
+    "C:\\Users\\PEDRO\\Documents\\VSCode\\proyecto-ventas-cliente-1\\frontnextvent-v2\\src\\app\\product\\category\\poleras\\page": []
+  }
+}

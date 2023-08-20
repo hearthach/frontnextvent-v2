@@ -33,8 +33,12 @@ export const navConfig = [
           <a
             href={paths.product.category.polos.root}
             style={subheaderStyle}
-            onMouseEnter={(e) => e.target.style.color = '#00A76F'} // Cambia a verde cuando se pase el mouse
-            onMouseLeave={(e) => e.target.style.color = 'black'} // Vuelve al color negro cuando se deje de pasar el mouse
+            onMouseEnter={(e) => {
+              e.target.style.color = '#00A76F'; // Cambia a verde cuando se pase el mouse
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = 'black';
+            }} // Vuelve al color negro cuando se deje de pasar el mouse
           >
             POLOS
           </a>
@@ -51,8 +55,12 @@ export const navConfig = [
           <a
             href={paths.product.category.poleras.root}
             style={subheaderStyle}
-            onMouseEnter={(e) => e.target.style.color = '#00A76F'} // Cambia a verde cuando se pase el mouse
-            onMouseLeave={(e) => e.target.style.color = 'black'} // Vuelve al color negro cuando se deje de pasar el mouse
+            onMouseEnter={(e) => {
+              e.target.style.color = '#00A76F';
+            }} // Cambia a verde cuando se pase el mouse
+            onMouseLeave={(e) => {
+              e.target.style.color = 'black';
+            }} // Vuelve al color negro cuando se deje de pasar el mouse
           >
             POLERAS
           </a>
@@ -66,8 +74,12 @@ export const navConfig = [
           <a
             href={paths.product.category.shorts.root}
             style={subheaderStyle}
-            onMouseEnter={(e) => e.target.style.color = '#00A76F'} // Cambia a verde cuando se pase el mouse
-            onMouseLeave={(e) => e.target.style.color = 'black'} // Vuelve al color negro cuando se deje de pasar el mouse
+            onMouseEnter={(e) => {
+              e.target.style.color = '#00A76F';
+            }} // Cambia a verde cuando se pase el mouse
+            onMouseLeave={(e) => {
+              e.target.style.color = 'black';
+          }} // Vuelve al color negro cuando se deje de pasar el mouse
           >
             SHORTS
           </a>
@@ -81,8 +93,12 @@ export const navConfig = [
           <a
             href={paths.product.category.jogger.root}
             style={subheaderStyle}
-            onMouseEnter={(e) => e.target.style.color = '#00A76F'} // Cambia a verde cuando se pase el mouse
-            onMouseLeave={(e) => e.target.style.color = 'black'} // Vuelve al color negro cuando se deje de pasar el mouse
+            onMouseEnter={(e) => {
+              e.target.style.color = '#00A76F';
+            }} // Cambia a verde cuando se pase el mouse
+            onMouseLeave={(e) => {
+              e.target.style.color = 'black';
+          }} // Vuelve al color negro cuando se deje de pasar el mouse
           >
             JOGGER
           </a>

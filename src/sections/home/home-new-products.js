@@ -3,13 +3,13 @@ import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+
 import { MotionViewport, varFade } from 'src/components/animate';
 import Carousel, { CarouselArrows, useCarousel } from 'src/components/carousel';
-import { RouterLink } from 'src/routes/components';
+
 import { useGetProducts } from 'src/api/product'; // Assuming you have a function to get products
 import ProductItem from '../product/product-item';
-import { paths } from 'src/routes/paths'; // Make sure paths is imported or defined
+
 
 // ----------------------------------------------------------------------
 

@@ -45,7 +45,7 @@ const TABS = [
   // },
   {
     value: 'security',
-    label: 'Seguridad', //Security
+    label: 'Seguridad', // Security
     icon: <Iconify icon="ic:round-vpn-key" width={24} />,
   },
 ];
@@ -64,7 +64,7 @@ export default function AccountView() {
   return (
     <Container maxWidth={settings.themeStretch ? false : 'lg'}>
       <CustomBreadcrumbs
-        heading="Cuenta" //Account
+        heading="Cuenta" // Account
         links={[
           { name: 'Dashboard', href: paths.dashboard.root },
           // { name: 'User', href: paths.dashboard.user.root },

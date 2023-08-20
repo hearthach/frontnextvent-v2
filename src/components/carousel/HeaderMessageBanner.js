@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -12,17 +12,18 @@ const messages = [
 
 const HeaderMessageBanner = () => {
   const theme = useTheme();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [currentIndex, setCurrentIndex] = useState(0); // Agrega la declaración de currentIndex aquí
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % messages.length);
-    }, 1500); // Cambiar cada 1.5 segundos
+    }, 1500);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, []); // Vacío para asegurarte de que se ejecute solo una vez al montar el componente
 
   return (
     <Box
@@ -31,21 +32,21 @@ const HeaderMessageBanner = () => {
         background: theme.palette.primary.main,
         color: theme.palette.primary.contrastText,
         height: 60,
-        overflow: 'hidden', // Ocultar el contenido que se desborda
+        overflow: 'hidden',
         zIndex: 2000,
         display: 'flex',
-        justifyContent: 'center', // Centrar horizontalmente
-        alignItems: 'center', // Centrar verticalmente
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Box
         sx={{
           position: 'absolute',
           display: 'flex',
-          justifyContent: 'start', // Alinear al principio para que los mensajes se desplacen
+          justifyContent: 'start',
           alignItems: 'center',
-          width: '100%', // Ocupar todo el ancho
-          animation: 'marquee 25s linear infinite', // Animación de desplazamiento
+          width: '100%',
+          animation: 'marquee 25s linear infinite',
           '@keyframes marquee': {
             '0%': { transform: 'translateX(100%)' },
             '100%': { transform: 'translateX(-100%)' },
@@ -57,8 +58,8 @@ const HeaderMessageBanner = () => {
             key={index}
             variant="body1"
             sx={{
-              whiteSpace: 'nowrap', // Evitar saltos de línea
-              padding: '0 16px', // Espacio entre mensajes
+              whiteSpace: 'nowrap',
+              padding: '0 16px',
             }}
           >
             {message}

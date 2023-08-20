@@ -12,7 +12,7 @@ import { MotionViewport, varFade } from 'src/components/animate';
 import Carousel, { CarouselArrows, useCarousel } from 'src/components/carousel';
 import { RouterLink } from 'src/routes/components';
 // api
-import { useGetProducts, useSearchProducts } from 'src/api/product';
+import { useGetProducts } from 'src/api/product';
 // routes
 import { paths } from 'src/routes/paths';
 //
@@ -41,14 +41,7 @@ export default function HomeProductsSaleCarousel() {
         ],
     });
 
-    const { products, productsLoading } = useGetProducts(); // Obtener la lista de productos
-
-    // Definir la función para manejar la selección de tallas
-    const handleSizeSelect = (size) => {
-        console.log(`Talla seleccionada: ${size}`);
-        // Agrega aquí la lógica que necesites para manejar la selección de tallas
-    };
-
+    const { products } = useGetProducts(); // Obtener la lista de productos
 
     return (
         <Container component={MotionViewport} sx={{ textAlign: 'center', py: { xs: 10, md: 15 } }}>

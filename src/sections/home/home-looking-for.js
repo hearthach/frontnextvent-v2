@@ -66,7 +66,8 @@ export default function HomeLookingFor() {
   );
 
   const renderSlider = (
-    <Slider autoplay={true} autoplaySpeed={2500} infinite={true}>
+    // <Slider autoplay={true} autoplaySpeed={2500} infinite={true}>
+    <Slider autoplay autoplaySpeed={2500} infinite>
       <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing-1.webp" />
       <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing-2.webp" />
       <Image disabledEffect alt="rocket" src="/assets/images/home/zone_landing-3.webp" />

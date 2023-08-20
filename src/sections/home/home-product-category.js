@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'; // Importa PropTypes
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -7,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { m } from 'framer-motion'; // Asegúrate de importar m de framer-motion
 
-import Link from '@mui/material/Link';
+
 
 import { paths } from 'src/routes/paths';
 
@@ -68,8 +69,8 @@ const renderDescription = (
   </Stack>
 );
 
-const HomeProductCategorias = () => {
-  return (
+const HomeProductCategorias = () => (
+
     <Box
       sx={{
         py: { xs: 10, md: 5 },
@@ -86,8 +87,8 @@ const HomeProductCategorias = () => {
         </Grid>
       </Container>      
     </Box>
-  );
-};
+  
+);
 
 function CategoryCard({ categoryName, imageUrl }) {
   const [hovered, setHovered] = useState(false);
@@ -149,7 +150,6 @@ function CategoryCard({ categoryName, imageUrl }) {
           transform: 'translate(-50%, -50%)',
           zIndex: 1,
           color: hovered ? '#00A76F' : 'white', // Cambia el color de letra al hacer hover
-          color: 'white',
           fontWeight: 'bold',
           fontSize: '3rem', // Cambia este valor según tus preferencias
           textAlign: 'center',
@@ -165,6 +165,11 @@ function CategoryCard({ categoryName, imageUrl }) {
     </Box>
   );
 }
+
+CategoryCard.propTypes = {
+  categoryName: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+};
 
 export default function HomeProductCategoriasWithDescription() {
   return (

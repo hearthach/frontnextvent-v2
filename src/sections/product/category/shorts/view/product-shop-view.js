@@ -20,7 +20,7 @@ import {
   PRODUCT_RATING_OPTIONS,
   PRODUCT_CATEGORY_OPTIONS,
 } from 'src/_mock';
-import { _mock } from 'src/_mock'; // Asegúrate de importar _mock correctamente
+// import { _mock } from 'src/_mock'; // Asegúrate de importar _mock correctamente
 // api
 import { useGetProducts, useSearchProducts } from 'src/api/product';
 // components

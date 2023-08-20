@@ -13,13 +13,10 @@ import { fCurrency } from 'src/utils/format-number';
 import Label from 'src/components/label';
 import Image from 'src/components/image';
 import { ColorPreview } from 'src/components/color-utils';
-import { useCheckoutContext } from '../checkout/context';
 
 export default function ProductItem({ product }) {
   const theme = useTheme(); // Accede al tema actual utilizando useTheme
   const [selectedSize, setSelectedSize] = useState(null);
-
-  const { onAddToCart } = useCheckoutContext();
 
   const { id, name, coverUrl, price, colors, available, sizes, priceSale, newLabel, saleLabel } =
     product;

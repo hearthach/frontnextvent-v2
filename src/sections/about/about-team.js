@@ -11,7 +11,7 @@ import { MotionViewport, varFade } from 'src/components/animate';
 import Carousel, { CarouselArrows, useCarousel } from 'src/components/carousel';
 import { RouterLink } from 'src/routes/components';
 // api
-import { useGetProducts, useSearchProducts } from 'src/api/product';
+import { useGetProducts } from 'src/api/product';
 // routes
 import { paths } from 'src/routes/paths';
 //
@@ -39,7 +39,7 @@ export default function ProductsCarousel() {
     ],
   });
 
-  const { products, productsLoading } = useGetProducts(); // Get the list of products
+  const { products } = useGetProducts(); // Get the list of products
 
   return (
     <Container component={MotionViewport} sx={{ textAlign: 'center', py: { xs: 10, md: 15 } }}>

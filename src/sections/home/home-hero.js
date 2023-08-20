@@ -181,7 +181,7 @@ export default function HomeHero() {
     >
       {/* 1-aviso mi tienda */}
       <m.div variants={varFade().in}>
-        <Typography
+        {/* <Typography
           variant="h2"
           sx={{
             textAlign: 'center',
@@ -189,7 +189,7 @@ export default function HomeHero() {
         >
           Mi Tienda <br />
           Online
-        </Typography>
+        </Typography> */}
       </m.div>
       
       {/* 2-titulo zilex     */}

@@ -36,7 +36,7 @@ import ProductDetailsDescription from '../product-details-description';
 const SUMMARY = [
   {
     title: '100% Original',
-    description: 'Chocolate bar candy canes ice cream toffee cookie halvah.',
+    description: 'Hecho en Perú, telas y algodon.',
     icon: 'solar:verified-check-bold',
   },
   {
@@ -153,12 +153,12 @@ export default function ProductDetailsView({ id }) {
           {[
             {
               value: 'description',
-              label: 'Description',
+              label: 'Descripciones',
             },
-            {
-              value: 'reviews',
-              label: `Reviews (${product.reviews.length})`,
-            },
+            // {
+            //   value: 'reviews',
+            //   label: `Reviews (${product.reviews.length})`,
+            // },
           ].map((tab) => (
             <Tab key={tab.value} value={tab.value} label={tab.label} />
           ))}
@@ -168,14 +168,14 @@ export default function ProductDetailsView({ id }) {
           <ProductDetailsDescription description={product?.description} />
         )}
 
-        {currentTab === 'reviews' && (
+        {/* {currentTab === 'reviews' && (
           <ProductDetailsReview
             ratings={product.ratings}
             reviews={product.reviews}
             totalRatings={product.totalRatings}
             totalReviews={product.totalReviews}
           />
-        )}
+        )} */}
       </Card>
     </>
   );

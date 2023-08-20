@@ -36,7 +36,7 @@ import ProductDetailsDescription from '../../../product-details-description';
 const SUMMARY = [
   {
     title: '100% Original',
-    description: 'Chocolate bar candy canes ice cream toffee cookie halvah.',
+    description: 'Hecho en Perú, telas y algodon.',
     icon: 'solar:verified-check-bold',
   },
   {

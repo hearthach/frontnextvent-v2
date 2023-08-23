@@ -19,4 +19,14 @@
   src: local('CircularStd'), url('CircularStd-Bold.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans.woff2') format('woff2'),
+       url('/fonts/public-sans.woff') format('woff');
+  /* Agrega otros formatos si es necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
  

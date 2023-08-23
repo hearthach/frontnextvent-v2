@@ -134,7 +134,7 @@ export default function ProductDetailsSummary({
 
   const renderShare = (
     <Stack direction="row" spacing={3} justifyContent="center">
-      <Link
+      {/* <Link
         variant="subtitle2"
         sx={{
           color: 'text.secondary',
@@ -144,7 +144,7 @@ export default function ProductDetailsSummary({
       >
         <Iconify icon="mingcute:add-line" width={16} sx={{ mr: 1 }} />
         Compare
-      </Link>
+      </Link> */}
 
       <Link
         variant="subtitle2"
@@ -155,7 +155,7 @@ export default function ProductDetailsSummary({
         }}
       >
         <Iconify icon="solar:heart-bold" width={16} sx={{ mr: 1 }} />
-        Favorite
+        Favoritos
       </Link>
 
       <Link
@@ -167,7 +167,7 @@ export default function ProductDetailsSummary({
         }}
       >
         <Iconify icon="solar:share-bold" width={16} sx={{ mr: 1 }} />
-        Share
+        Compartir
       </Link>
     </Stack>
   );
@@ -204,7 +204,7 @@ export default function ProductDetailsSummary({
         size="small"
         helperText={
           <Link underline="always" color="textPrimary">
-            Size Chart
+            Disponibilidad
           </Link>
         }
         sx={{

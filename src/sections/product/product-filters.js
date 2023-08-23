@@ -323,7 +323,7 @@ function InputRange({ type, value, onFilters }) {
           fontWeight: 'fontWeightSemiBold',
         }}
       >
-        {`${type} ($)`}
+        {`${type} (S/.)`}
       </Typography>
 
       <InputBase

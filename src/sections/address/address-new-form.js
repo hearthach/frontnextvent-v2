@@ -79,7 +79,7 @@ export default function AddressNewForm({ open, onClose, onCreate }) {
   return (
     <Dialog fullWidth maxWidth="sm" open={open} onClose={onClose}>
       <FormProvider methods={methods} onSubmit={onSubmit}>
-        <DialogTitle>New address</DialogTitle>
+        <DialogTitle>Nueva Dirección</DialogTitle>
 
         <DialogContent dividers>
           <Stack spacing={3}>

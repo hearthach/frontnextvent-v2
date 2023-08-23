@@ -26,7 +26,8 @@ export default function CheckoutView() {
   return (
     <Container maxWidth={settings.themeStretch ? false : 'lg'} sx={{ mb: 10 }}>
       <Typography variant="h4" sx={{ my: { xs: 3, md: 5 } }}>
-        Checkout
+        <br />
+        Finalizar Compra
       </Typography>
 
       <Grid container justifyContent={checkout.completed ? 'center' : 'flex-start'}>

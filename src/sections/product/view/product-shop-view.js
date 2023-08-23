@@ -27,7 +27,7 @@ import EmptyContent from 'src/components/empty-content';
 import { useSettingsContext } from 'src/components/settings';
 //
 import { useCheckoutContext } from '../../checkout/context';
-import CartIcon from '../common/cart-icon';
+// import CartIcon from '../common/cart-icon'; // se comenta el carrito de suma de productos
 import ProductList from '../product-list';
 import ProductSort from '../product-sort';
 import ProductSearch from '../product-search';
@@ -153,7 +153,7 @@ export default function ProductShopView() {
         mb: 15,
       }}
     >
-      <CartIcon totalItems={checkout.totalItems} />
+      {/* <CartIcon totalItems={checkout.totalItems} /> */}
 
       <Typography
         variant="h4"
@@ -161,6 +161,7 @@ export default function ProductShopView() {
           my: { xs: 3, md: 5 },
         }}
       >
+        <br />
         Compra en Zilex
       </Typography>
 

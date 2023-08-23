@@ -20,18 +20,18 @@ import CheckoutPaymentMethods from './checkout-payment-methods';
 const DELIVERY_OPTIONS = [
   {
     value: 0,
-    label: 'Free',
-    description: '5-7 Days delivery',
+    label: 'Gratis',
+    description: 'Entrega en 5-7 días',
   },
   {
     value: 10,
     label: 'Standard',
-    description: '3-5 Days delivery',
+    description: 'Entrega en 3-5 días',
   },
   {
     value: 20,
     label: 'Express',
-    description: '2-3 Days delivery',
+    description: 'Entrega en 2-3 días',
   },
 ];
 

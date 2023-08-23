@@ -32,7 +32,7 @@ export default function CheckoutBillingAddress() {
                 <Stack flexDirection="row" flexWrap="wrap" flexShrink={0}>
                   {!address.primary && (
                     <Button size="small" color="error" sx={{ mr: 1 }}>
-                      Delete
+                      Eliminar
                     </Button>
                   )}
                   <Button
@@ -40,7 +40,7 @@ export default function CheckoutBillingAddress() {
                     size="small"
                     onClick={() => checkout.onCreateBilling(address)}
                   >
-                    Deliver to this Address
+                    Enviar a esta Dirección
                   </Button>
                 </Stack>
               }
@@ -60,7 +60,7 @@ export default function CheckoutBillingAddress() {
               onClick={checkout.onBackStep}
               startIcon={<Iconify icon="eva:arrow-ios-back-fill" />}
             >
-              Back
+              Volver
             </Button>
 
             <Button
@@ -69,7 +69,7 @@ export default function CheckoutBillingAddress() {
               onClick={addressForm.onTrue}
               startIcon={<Iconify icon="mingcute:add-line" />}
             >
-              New Address
+              Nueva Dirección
             </Button>
           </Stack>
         </Grid>

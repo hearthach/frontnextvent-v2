@@ -83,6 +83,19 @@ export default function ProductItem({ product }) {
     </Box>
   );
 
+  const renderBuyButton = (
+    <Button
+      className="add-cart-btn"
+      variant="contained"
+      color="primary"
+      size="small"
+      component={RouterLink}
+      href={linkTo} // Enlace a los detalles del producto
+    >
+      Comprar
+    </Button>
+  );
+
   const renderContent = (
     <Stack spacing={2.5} sx={{ p: 3, pt: 2 }}>
       <Link component={RouterLink} href={linkTo} color="inherit" variant="subtitle2" noWrap>
@@ -106,6 +119,9 @@ export default function ProductItem({ product }) {
       <Stack direction="row" spacing={1} justifyContent="center">
         {sizes && renderSizeButtons}
       </Stack>
+
+      {/** Agrega el botón de Comprar debajo de las tallas */}
+      {renderBuyButton}
     </Stack>
   );
 

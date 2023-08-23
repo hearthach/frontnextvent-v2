@@ -17,7 +17,7 @@ export default function CheckoutDelivery({ options, onApplyShipping, ...other })
 
   return (
     <Card {...other}>
-      <CardHeader title="Delivery" />
+      <CardHeader title="Entrega" />
 
       <Controller
         name="delivery"

@@ -12,10 +12,10 @@ import CheckoutCartProduct from './checkout-cart-product';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'product', label: 'Product' },
-  { id: 'price', label: 'Price' },
-  { id: 'quantity', label: 'Quantity' },
-  { id: 'totalAmount', label: 'Total Price', align: 'right' },
+  { id: 'product', label: 'Productos' },
+  { id: 'price', label: 'Precios' },
+  { id: 'quantity', label: 'Cantidades' },
+  { id: 'totalAmount', label: 'Precio total', align: 'right' },
   { id: '' },
 ];
 

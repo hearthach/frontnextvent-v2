@@ -23,7 +23,8 @@ import { navConfig } from './config-navigation';
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
 //
-import { SettingsButton, HeaderShadow, LoginButton } from '../_common';
+import { HeaderShadow } from '../_common';
+// import { SettingsButton, HeaderShadow, LoginButton } from '../_common';
 
 import HeaderMessageBanner from '../../components/carousel/HeaderMessageBanner'; // Importa el nuevo componente
 
@@ -92,14 +93,14 @@ export default function Header() {
           {mdUp && <NavDesktop offsetTop={offsetTop} data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            {mdUp && <LoginButton />}
+            {/* {mdUp && <LoginButton />}
 
             <SettingsButton
               sx={{
                 ml: { xs: 1, md: 0 },
                 mr: { md: 2 },
               }}
-            />
+            /> */}
 
             {!mdUp && <NavMobile offsetTop={offsetTop} data={navConfig} />}
           </Stack>

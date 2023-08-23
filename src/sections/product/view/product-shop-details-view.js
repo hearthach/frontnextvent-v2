@@ -39,13 +39,13 @@ const SUMMARY = [
     icon: 'solar:verified-check-bold',
   },
   {
-    title: '10 Day Replacement',
-    description: 'Marshmallow biscuit donut dragée fruitcake wafer.',
+    title: 'Cambios y Devoluciones',
+    description: 'Si el producto está dañado, el cliente debe proporcionar pruebas. Se hará el cambio gratis en 15 días desde la recepción.',
     icon: 'solar:clock-circle-bold',
   },
   {
-    title: 'Year Warranty',
-    description: 'Cotton candy gingerbread cake I love sugar sweet.',
+    title: 'Envíos',
+    description: 'Envíos a Lima: Lunes a Sábado, 1 día previo. A provincias: Lunes, Miércoles y Viernes por Courier previamente coordinado. Llega en 2-4 días, a domicilio o agencia cercana, mismo costo.',
     icon: 'solar:shield-check-bold',
   },
 ];
@@ -78,7 +78,7 @@ export default function ProductShopDetailsView({ id }) {
           startIcon={<Iconify icon="eva:arrow-ios-back-fill" width={16} />}
           sx={{ mt: 3 }}
         >
-          Back to List
+          Regresar a la Lista
         </Button>
       }
       sx={{ py: 10 }}
@@ -89,9 +89,9 @@ export default function ProductShopDetailsView({ id }) {
     <>
       <CustomBreadcrumbs
         links={[
-          { name: 'Home', href: '/' },
+          { name: 'Inicio', href: '/' },
           {
-            name: 'Shop',
+            name: 'Tienda',
             href: paths.product.root,
           },
           { name: product?.name },

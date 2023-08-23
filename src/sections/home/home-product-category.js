@@ -7,10 +7,9 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { m } from 'framer-motion'; // Asegúrate de importar m de framer-motion
-
-
-
 import { paths } from 'src/routes/paths';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 // components
 import { varFade } from 'src/components/animate';
@@ -69,8 +68,10 @@ const renderDescription = (
   </Stack>
 );
 
-const HomeProductCategorias = () => (
+const HomeProductCategorias = () => {
+  const isMobileOrTablet = useMediaQuery((theme) => theme.breakpoints.down('sm')); // Cambio a 'sm' para dispositivos móviles y tabletas
 
+  return (
     <Box
       sx={{
         py: { xs: 10, md: 5 },
@@ -78,29 +79,29 @@ const HomeProductCategorias = () => (
       }}
     >
       <Container>
-        <Grid container spacing={5}>
+        <Grid container spacing={2} justifyContent="center">
           {categories.map((category) => (
-            <Grid item xs={12} md={4} key={category}>
-              <CategoryCard categoryName={category} imageUrl={categoryImages[category]} />
+            <Grid item xs={6} md={4} key={category}>
+              <CategoryCard categoryName={category} imageUrl={categoryImages[category]} isMobileOrTablet={isMobileOrTablet} />
             </Grid>
           ))}
         </Grid>
-      </Container>      
+      </Container>
     </Box>
+  );
   
-);
+};
 
 function CategoryCard({ categoryName, imageUrl }) {
   const [hovered, setHovered] = useState(false);
+  // const isMobileOrTablet = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   const redirectToCategory = (event) => {
-    if (event.button === 0) { // Clic izquierdo
+    if (event.button === 0) {
       if (categoryPaths[categoryName]) {
-        window.location.href = categoryPaths[categoryName]; // Redirige a la ruta correspondiente
+        window.location.href = categoryPaths[categoryName];
       }
-    } else if (event.button === 2) { // Clic derecho
-      // Agregar la lógica para abrir en nueva pestaña
-      // Por ejemplo, podrías abrir la URL en una nueva pestaña
+    } else if (event.button === 2) {
       window.open(categoryPaths[categoryName], '_blank');
     }
   };
@@ -115,19 +116,18 @@ function CategoryCard({ categoryName, imageUrl }) {
         padding: 1,
         position: 'relative',
         overflow: 'hidden',
-        width: '110%',
+        width: '100%',
         height: '100%',
-        aspectRatio: '3/4', // Mantenemos una relación de aspecto cuadrado
+        aspectRatio: '3/4',
         cursor: 'pointer',
-        transition: 'transform 0.3s ease', // Agregamos transición para suavizar el efecto
-        transform: hovered ? 'scale(1.05)' : 'scale(1)', // Zoom al hacer hover
+        transition: 'transform 0.3s ease',
+        transform: hovered ? 'scale(1.05)' : 'scale(1)',
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={redirectToCategory}
-      onContextMenu={redirectToCategory} // Maneja el evento de clic derecho
+      onContextMenu={redirectToCategory}
     >
-      
       <Box
         component="div"
         sx={{
@@ -136,32 +136,31 @@ function CategoryCard({ categoryName, imageUrl }) {
           backgroundImage: imageUrl ? `url(${imageUrl})` : 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          borderRadius: 1, // Eliminamos el borde redondeado para tener un rectángulo completo
+          borderRadius: 1,
           cursor: 'pointer',
         }}
       />
-      {hovered && (
+      {(hovered || isMobileOrTablet) && ( // Cambio aquí para mostrar en móviles y tabletas
         <Typography
-        variant="h6"
-        sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          zIndex: 1,
-          color: hovered ? '#00A76F' : 'white', // Cambia el color de letra al hacer hover
-          fontWeight: 'bold',
-          fontSize: '3rem', // Cambia este valor según tus preferencias
-          textAlign: 'center',
-          textShadow: '1px 1px 1px black', // Agrega sombra al texto para crear un efecto de borde negro
-          cursor: 'pointer',
-        }}
-      >
-        {categoryName}
-      </Typography>
-      
+          variant="h6"
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 1,
+            color: hovered ? '#00A76F' : 'white',
+            fontWeight: 'bold',
+            fontSize: '3rem',
+            textAlign: 'center',
+            textShadow: '1px 1px 1px black',
+            cursor: 'pointer',
+            display: isMobileOrTablet ? 'block' : 'none', // Mostrar en móviles y tabletas, ocultar en desktop
+          }}
+        >
+          {categoryName}
+        </Typography>
       )}
-      
     </Box>
   );
 }
@@ -169,6 +168,7 @@ function CategoryCard({ categoryName, imageUrl }) {
 CategoryCard.propTypes = {
   categoryName: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
+  isMobileOrTablet: PropTypes.bool.isRequired,
 };
 
 export default function HomeProductCategoriasWithDescription() {

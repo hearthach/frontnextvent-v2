@@ -21,7 +21,7 @@ import ProductItem from '../product/product-item';
 // ----------------------------------------------------------------------
 
 export default function HomeProductsSaleCarousel() {
-    const [selectedSize, setSelectedSize] = useState(null); // Puedes cambiar `null` a la talla por defecto
+    const [selectedSize, setSelectedSize] = useState(null);
     const carousel = useCarousel({
         infinite: false,
         slidesToShow: 4,
@@ -42,6 +42,11 @@ export default function HomeProductsSaleCarousel() {
     });
 
     const { products } = useGetProducts(); // Obtener la lista de productos
+
+    // Filtrar los productos para excluir los que son "NEW" o están fuera de stock
+    const filteredProducts = products.filter(
+        product => (!product.newLabel || !product.newLabel.enabled) && product.available
+    );
 
     return (
         <Container component={MotionViewport} sx={{ textAlign: 'center', py: { xs: 10, md: 15 } }}>
@@ -66,18 +71,18 @@ export default function HomeProductsSaleCarousel() {
                     leftButtonProps={{
                         sx: {
                             left: 24,
-                            ...(products.length < 5 && { display: 'none' }),
+                            ...(filteredProducts.length < 5 && { display: 'none' }),
                         },
                     }}
                     rightButtonProps={{
                         sx: {
                             right: 24,
-                            ...(products.length < 5 && { display: 'none' }),
+                            ...(filteredProducts.length < 5 && { display: 'none' }),
                         },
                     }}
                 >
                     <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
-                        {products.map((product) => (
+                        {filteredProducts.map((product) => (
                             <Box
                                 key={product.id}
                                 component={m.div}
@@ -99,7 +104,7 @@ export default function HomeProductsSaleCarousel() {
                                 <ProductItem
                                     product={product}
                                     selectedSize={selectedSize}
-                                    setSelectedSize={setSelectedSize} // Cambia 'onSizeSelect' a 'setSelectedSize'
+                                    setSelectedSize={setSelectedSize}
                                 />
                             </Box>
                         ))}
@@ -124,5 +129,3 @@ export default function HomeProductsSaleCarousel() {
 HomeProductsSaleCarousel.propTypes = {
     products: PropTypes.array,
 };
-
-// The ProductItem component remains the same

@@ -15,25 +15,25 @@ import { MotionContainer, varFade } from 'src/components/animate';
 
 const CONTACTS = [
   {
-    country: 'Bali',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(239) 555-0108',
+    country: 'Lima, Perú',
+    address: 'Gamarra 653, Sótano 1 / Stand 10, Galería “Plaza”',
+    phoneNumber: '999999999',
   },
   {
-    country: 'London',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(319) 555-0115',
+    country: 'Lima, Perú',
+    address: 'Gamarra 653, Sótano 1 / Stand 10, Galería “Plaza”',
+    phoneNumber: '999999999',
   },
-  {
-    country: 'Prague',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(252) 555-0126',
-  },
-  {
-    country: 'Moscow',
-    address: '508 Bridle',
-    phoneNumber: '(307) 555-0133',
-  },
+  // {
+  //   country: 'Prague',
+  //   address: '508 Bridle Avenue Newnan, GA 30263',
+  //   phoneNumber: '(252) 555-0126',
+  // },
+  // {
+  //   country: 'Moscow',
+  //   address: '508 Bridle',
+  //   phoneNumber: '(307) 555-0133',
+  // },
 ];
 
 // ----------------------------------------------------------------------
@@ -46,12 +46,13 @@ export default function ContactHero() {
       sx={{
         ...bgGradient({
           color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/images/contact/hero.jpg',
+          imgUrl: '/assets/images/home/zone_landing-2.webp',
         }),
         height: { md: 560 },
         py: { xs: 10, md: 0 },
         overflow: 'hidden',
         position: 'relative',
+        backgroundPosition: 'center top 50px', // Ajusta el valor para mover la imagen
       }}
     >
       <Container component={MotionContainer}>
@@ -62,13 +63,13 @@ export default function ContactHero() {
             textAlign: { xs: 'center', md: 'unset' },
           }}
         >
-          <TextAnimate text="Where" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
+          <TextAnimate text="Donde" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
           <br />
 
           <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
-            <TextAnimate text="to" />
-            <TextAnimate text="find" />
-            <TextAnimate text="us?" />
+            <TextAnimate text="nos" />
+            <TextAnimate text="puedes" />
+            <TextAnimate text="ubicar?" />
           </Stack>
 
           <Stack

@@ -21,7 +21,7 @@ export const navConfig = [
   {
     title: 'About',
     icon: <Iconify icon="solar:home-2-bold-duotone" />,
-    path: paths.about,
+    path: '/',
   },
   {
     title: 'Tienda',

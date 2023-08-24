@@ -14,32 +14,32 @@ export default function ContactForm() {
     <Stack component={MotionViewport} spacing={5}>
       <m.div variants={varFade().inUp}>
         <Typography variant="h3">
-          Feel free to contact us. <br />
-          We&apos;ll be glad to hear from you, buddy.
+          No dudes en buscarnos. <br />
+          Estaremos encantados de saber de ti.
         </Typography>
       </m.div>
 
       <Stack spacing={3}>
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Name" />
+          <TextField fullWidth label="Nombres" />
         </m.div>
 
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Email" />
+          <TextField fullWidth label="Correo" />
         </m.div>
 
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Subject" />
+          <TextField fullWidth label="Asunto" />
         </m.div>
 
         <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Enter your message here." multiline rows={4} />
+          <TextField fullWidth label="Ingresa tu mensaje aquí." multiline rows={4} />
         </m.div>
       </Stack>
 
       <m.div variants={varFade().inUp}>
         <Button size="large" variant="contained">
-          Submit Now
+          Enviar ahora
         </Button>
       </m.div>
     </Stack>

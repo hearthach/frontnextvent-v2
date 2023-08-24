@@ -9,6 +9,8 @@ import Typography from '@mui/material/Typography';
 import { m } from 'framer-motion'; // Asegúrate de importar m de framer-motion
 import { paths } from 'src/routes/paths';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Button from '@mui/material/Button'; // Agrega la importación del componente Button
+
 
 
 // components
@@ -92,7 +94,7 @@ const HomeProductCategorias = () => {
   
 };
 
-function CategoryCard({ categoryName, imageUrl }) {
+function CategoryCard({ categoryName, imageUrl, isMobileOrTablet }) {
   const [hovered, setHovered] = useState(false);
   // const isMobileOrTablet = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
@@ -140,26 +142,27 @@ function CategoryCard({ categoryName, imageUrl }) {
           cursor: 'pointer',
         }}
       />
-      {(hovered || isMobileOrTablet) && ( // Cambio aquí para mostrar en móviles y tabletas
-        <Typography
-          variant="h6"
+      {(hovered || isMobileOrTablet) && (
+        <Button
+          variant="contained"
+          size="small"
           sx={{
             position: 'absolute',
-            top: '50%',
+            top: isMobileOrTablet ? '80%' : '50%', // Ajusta la posición en dispositivos móviles/tabletas
             left: '50%',
             transform: 'translate(-50%, -50%)',
             zIndex: 1,
-            color: hovered ? '#00A76F' : 'white',
+            backgroundColor: '#00A76F',
+            color: 'white',
             fontWeight: 'bold',
-            fontSize: '3rem',
+            fontSize: '1rem',
             textAlign: 'center',
-            textShadow: '1px 1px 1px black',
             cursor: 'pointer',
-            display: isMobileOrTablet ? 'block' : 'none', // Mostrar en móviles y tabletas, ocultar en desktop
+            display: 'block', // Mostrar siempre en móviles y tabletas
           }}
         >
           {categoryName}
-        </Typography>
+        </Button>
       )}
     </Box>
   );

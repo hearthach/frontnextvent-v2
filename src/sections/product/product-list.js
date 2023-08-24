@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
-// @mui
 import Box from '@mui/material/Box';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
-//
 import ProductItem from './product-item';
 import { ProductItemSkeleton } from './product-skeleton';
-
-// ----------------------------------------------------------------------
 
 export default function ProductList({ products, loading, ...other }) {
   const renderSkeleton = (
@@ -17,9 +13,12 @@ export default function ProductList({ products, loading, ...other }) {
     </>
   );
 
+  // Filtrar los productos para excluir los que están agotados
+  const filteredProducts = products.filter(product => product.available);
+
   const renderList = (
     <>
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}
     </>

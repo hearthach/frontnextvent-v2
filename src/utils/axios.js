@@ -48,8 +48,8 @@ export const endpoints = {
     search: '/api/post/search',
   },
   product: {
-    // list: '/api/product/list',
-    list: '/api/Productos/GetProductos', // nuevo fredy
+    list: '/api/product/list',
+    // list: '/api/Productos/GetProductos', // nuevo fredy
     // list: '/api/Productos/GetProductos', // Api Fredy
     details: '/api/product/details',
     search: '/api/product/search',

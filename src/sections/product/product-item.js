@@ -34,12 +34,12 @@ export default function ProductItem({ product }) {
       size="small"
       sx={{
         borderRadius: '50%',
-        width: '24px', // Tamaño más pequeño
-        height: '30px', // Tamaño más pequeño
-        fontSize: '10px', // Tamaño de la fuente más pequeño
+        width: '20px', // Tamaño más pequeño
+        height: '26px', // Tamaño más pequeño
+        fontSize: '9px', // Tamaño de la fuente más pequeño
         color: selectedSize === size ? theme.palette.primary.main : 'inherit', // Usa el color primario del tema
         borderColor: selectedSize === size ? theme.palette.primary.main : 'inherit', // Usa el color primario del tema
-        minWidth: '40px',
+        minWidth: '30px',
         '&:hover': {
           backgroundColor: '#1890FF', // Color de fondo al pasar el mouse
           color: 'white', // Color de fuente al pasar el mouse

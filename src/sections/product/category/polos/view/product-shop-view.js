@@ -165,6 +165,7 @@ export default function ProductPolosShopView() {
           my: { xs: 3, md: 5 },
         }}
       >
+        <br />
         POLOS - Zilex Perú
       </Typography>
 

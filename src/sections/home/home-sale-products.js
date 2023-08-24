@@ -23,7 +23,7 @@ import ProductItem from '../product/product-item';
 export default function HomeProductsSaleCarousel() {
     const [selectedSize, setSelectedSize] = useState(null);
     const carousel = useCarousel({
-        infinite: false,
+        infinite: true,
         slidesToShow: 4,
         responsive: [
             {
@@ -36,7 +36,7 @@ export default function HomeProductsSaleCarousel() {
             },
             {
                 breakpoint: 600,
-                settings: { slidesToShow: 1 },
+                settings: { slidesToShow: 2 },
             },
         ],
     });

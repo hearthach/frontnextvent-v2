@@ -165,6 +165,7 @@ export default function ProductJoggerShopView() {
           my: { xs: 3, md: 5 },
         }}
       >
+        <br />
         JOGGER - Zilex Perú
       </Typography>
 

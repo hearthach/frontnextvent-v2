@@ -165,6 +165,7 @@ export default function ProductShortsShopView() {
           my: { xs: 3, md: 5 },
         }}
       >
+        <br />
         SHORTS - Zilex Perú
       </Typography>
 

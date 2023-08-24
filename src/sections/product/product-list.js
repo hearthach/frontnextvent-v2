@@ -30,7 +30,7 @@ export default function ProductList({ products, loading, ...other }) {
         gap={3}
         display="grid"
         gridTemplateColumns={{
-          xs: 'repeat(1, 1fr)',
+          xs: 'repeat(2, 1fr)', // Cambia a dos columnas en modo celular
           sm: 'repeat(2, 1fr)',
           md: 'repeat(3, 1fr)',
           lg: 'repeat(4, 1fr)',

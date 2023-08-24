@@ -165,6 +165,7 @@ export default function ProductPolerasShopView() {
           my: { xs: 3, md: 5 },
         }}
       >
+        <br />
         POLERAS - Zilex Perú
       </Typography>
 

@@ -25,7 +25,7 @@ export default function HomeNewProductsCarousel() {
             },
             {
                 breakpoint: 600,
-                settings: { slidesToShow: 1 },
+                settings: { slidesToShow: 2 },
             },
         ],
     });

@@ -17,12 +17,7 @@ export const navConfig = [
     title: 'Inicio',
     icon: <Iconify icon="solar:home-2-bold-duotone" />,
     path: '/',
-  },
-  {
-    title: 'About',
-    icon: <Iconify icon="solar:home-2-bold-duotone" />,
-    path: '/',
-  },
+  },  
   {
     title: 'Tienda',
     path: '/pages',
@@ -108,5 +103,10 @@ export const navConfig = [
         ],
       },
     ],
+  },
+  {
+    title: 'Contáctanos',
+    icon: <Iconify icon="solar:home-2-bold-duotone" />,
+    path: '/contact-us',
   },
 ];

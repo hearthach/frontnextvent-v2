@@ -24,6 +24,9 @@ import FormProvider, { RHFSelect } from 'src/components/hook-form';
 //
 import IncrementerButton from './common/incrementer-button';
 
+import ProductDetailsDescription from './product-details-description';
+
+
 // ----------------------------------------------------------------------
 
 export default function ProductDetailsSummary({
@@ -35,6 +38,9 @@ export default function ProductDetailsSummary({
   ...other
 }) {
   const router = useRouter();
+
+   // Obtén la descripción del objeto product
+   const description = product.description;
 
   const {
     id,
@@ -169,6 +175,14 @@ export default function ProductDetailsSummary({
         <Iconify icon="solar:share-bold" width={16} sx={{ mr: 1 }} />
         Compartir
       </Link>
+    </Stack>
+  );
+
+  const renderDescription = (
+    <Stack >
+      <Box sx={{ mt: 2 }}>
+        <ProductDetailsDescription description={description} />
+      </Box>
     </Stack>
   );
 
@@ -324,6 +338,8 @@ export default function ProductDetailsSummary({
           {renderRating}
 
           {renderPrice}
+
+          {renderDescription}
 
           {renderSubDescription}
         </Stack>

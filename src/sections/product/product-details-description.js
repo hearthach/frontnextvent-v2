@@ -1,31 +1,21 @@
 import PropTypes from 'prop-types';
-// components
-import Markdown from 'src/components/markdown';
-
-// ----------------------------------------------------------------------
+import React, { useEffect, useState } from 'react'; // Agrega useState
+import Box from '@mui/material/Box';
+import ProductDescriptionExpansionPanel from './product-details-description-expasion-panel'; // Importa el nuevo componente
 
 export default function ProductDetailsDescription({ description }) {
+  const [descriptionBlocks, setDescriptionBlocks] = useState([]);
+
+  // Divide la descripción en bloques separados por <h6>
+  useEffect(() => {
+    const blocks = description.split('<h6>');
+    setDescriptionBlocks(blocks.filter(block => block.trim() !== ''));
+  }, [description]);
+
   return (
-    <Markdown
-      children={description}
-      sx={{
-        p: 3,
-        '& p, li, ol': {
-          typography: 'body2',
-        },
-        '& ol': {
-          p: 0,
-          display: { md: 'flex' },
-          listStyleType: 'none',
-          '& li': {
-            '&:first-of-type': {
-              minWidth: 240,
-              mb: { xs: 0.5, md: 0 },
-            },
-          },
-        },
-      }}
-    />
+    <Box sx={{ p: 3 }}>
+      <ProductDescriptionExpansionPanel descriptionBlocks={descriptionBlocks} />
+    </Box>
   );
 }
 

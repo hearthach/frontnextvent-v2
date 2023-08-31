@@ -3,15 +3,15 @@
 import PropTypes from 'prop-types';
 import { useCallback, useState } from 'react';
 // @mui
-import { alpha } from '@mui/material/styles';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Card from '@mui/material/Card';
+// import { alpha } from '@mui/material/styles';
+// import Tab from '@mui/material/Tab';
+// import Box from '@mui/material/Box';
+// import Tabs from '@mui/material/Tabs';
+// import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 // routes
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
@@ -27,28 +27,30 @@ import CartIcon from '../common/cart-icon';
 import { ProductDetailsSkeleton } from '../product-skeleton';
 import ProductDetailsSummary from '../product-details-summary';
 import ProductDetailsCarousel from '../product-details-carousel';
-import ProductDetailsDescription from '../product-details-description';
+// import ProductDetailsDescription from '../product-details-description';
 import { useCheckoutContext } from '../../checkout/context';
+
+import ProductListOutFitSale from '../product-list-outfit-sale';
 
 // ----------------------------------------------------------------------
 
-const SUMMARY = [
-  {
-    title: '100% Original',
-    description: 'Hecho en Perú, telas y algodon.',
-    icon: 'solar:verified-check-bold',
-  },
-  {
-    title: 'Cambios y Devoluciones',
-    description: 'Si el producto está dañado, el cliente debe proporcionar pruebas. Se hará el cambio gratis en 15 días desde la recepción.',
-    icon: 'solar:clock-circle-bold',
-  },
-  {
-    title: 'Envíos',
-    description: 'Envíos a Lima: Lunes a Sábado, 1 día previo. A provincias: Lunes, Miércoles y Viernes por Courier previamente coordinado. Llega en 2-4 días, a domicilio o agencia cercana, mismo costo.',
-    icon: 'solar:shield-check-bold',
-  },
-];
+// const SUMMARY = [
+//   {
+//     title: '100% Original',
+//     description: 'Hecho en Perú, telas y algodon.',
+//     icon: 'solar:verified-check-bold',
+//   },
+//   {
+//     title: 'Cambios y Devoluciones',
+//     description: 'Si el producto está dañado, el cliente debe proporcionar pruebas. Se hará el cambio gratis en 15 días desde la recepción.',
+//     icon: 'solar:clock-circle-bold',
+//   },
+//   {
+//     title: 'Envíos',
+//     description: 'Envíos a Lima: Lunes a Sábado, 1 día previo. A provincias: Lunes, Miércoles y Viernes por Courier previamente coordinado. Llega en 2-4 días, a domicilio o agencia cercana, mismo costo.',
+//     icon: 'solar:shield-check-bold',
+//   },
+// ];
 
 // ----------------------------------------------------------------------
 
@@ -60,6 +62,10 @@ export default function ProductShopDetailsView({ id }) {
   const [currentTab, setCurrentTab] = useState('description');
 
   const { product, productLoading, productError } = useGetProduct(id);
+
+  // Obtiene productDescriptions de alguna manera (por ejemplo, desde el objeto product)
+  const productDescriptions = product?.descriptions || {}; // Asegúrate de ajustar el camino correcto para obtener las descripciones
+
 
   const handleChangeTab = useCallback((event, newValue) => {
     setCurrentTab(newValue);
@@ -110,70 +116,10 @@ export default function ProductShopDetailsView({ id }) {
             items={checkout.items}
             onAddCart={checkout.onAddToCart}
             onGotoStep={checkout.onGotoStep}
+            description={productDescriptions[id]} // Pasa la descripción como prop
           />
         </Grid>
       </Grid>
-
-      <Box
-        gap={5}
-        display="grid"
-        gridTemplateColumns={{
-          xs: 'repeat(1, 1fr)',
-          md: 'repeat(3, 1fr)',
-        }}
-        sx={{ my: 10 }}
-      >
-        {SUMMARY.map((item) => (
-          <Box key={item.title} sx={{ textAlign: 'center', px: 5 }}>
-            <Iconify icon={item.icon} width={32} sx={{ color: 'primary.main' }} />
-
-            <Typography variant="subtitle1" sx={{ mb: 1, mt: 2 }}>
-              {item.title}
-            </Typography>
-
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              {item.description}
-            </Typography>
-          </Box>
-        ))}
-      </Box>
-
-      <Card>
-        <Tabs
-          value={currentTab}
-          onChange={handleChangeTab}
-          sx={{
-            px: 3,
-            boxShadow: (theme) => `inset 0 -2px 0 0 ${alpha(theme.palette.grey[500], 0.08)}`,
-          }}
-        >
-          {[
-            {
-              value: 'description',
-              label: 'Descripciones',
-            },
-            // {
-            //   value: 'reviews',
-            //   label: `Reviews (${product.reviews.length})`,
-            // },
-          ].map((tab) => (
-            <Tab key={tab.value} value={tab.value} label={tab.label} />
-          ))}
-        </Tabs>
-
-        {currentTab === 'description' && (
-          <ProductDetailsDescription description={product?.description} />
-        )}
-
-        {/* {currentTab === 'reviews' && (
-          <ProductDetailsReview
-            ratings={product.ratings}
-            reviews={product.reviews}
-            totalRatings={product.totalRatings}
-            totalReviews={product.totalReviews}
-          />
-        )} */}
-      </Card>
     </>
   );
 
@@ -192,6 +138,9 @@ export default function ProductShopDetailsView({ id }) {
       {productError && renderError}
 
       {product && renderProduct}
+
+      {/* 4-Productos mas Vendidos */}
+      <ProductListOutFitSale />
     </Container>
   );
 }

@@ -24,7 +24,7 @@ export default function CheckoutBillingAddress() {
     <>
       <Grid container spacing={3}>
         <Grid xs={12} md={8}>
-          {_addressBooks.slice(0, 4).map((address) => (
+          {_addressBooks.slice(0, 1).map((address) => (
             <AddressItem
               key={address.id}
               address={address}

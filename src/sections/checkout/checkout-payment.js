@@ -38,25 +38,25 @@ const DELIVERY_OPTIONS = [
 const PAYMENT_OPTIONS = [
   {
     value: 'paypal',
-    label: 'Pay with Paypal',
-    description: 'You will be redirected to PayPal website to complete your purchase securely.',
+    label: 'Pagar con PayPal',
+    description: 'Serás redirigido al sitio web de PayPal para completar tu compra de manera segura.',
   },
   {
     value: 'credit',
-    label: 'Credit / Debit Card',
-    description: 'We support Mastercard, Visa, Discover and Stripe.',
+    label: 'Tarjeta de crédito / débito',
+    description: 'Aceptamos Mastercard, Visa, Discover y Stripe.',
   },
   {
     value: 'cash',
-    label: 'Cash',
-    description: 'Pay with cash when your order is delivered.',
+    label: 'Efectivo',
+    description: 'Paga en efectivo cuando se entregue tu pedido.',
   },
 ];
 
 const CARDS_OPTIONS = [
-  { value: 'ViSa1', label: '**** **** **** 1212 - Jimmy Holland' },
-  { value: 'ViSa2', label: '**** **** **** 2424 - Shawn Stokes' },
-  { value: 'MasterCard', label: '**** **** **** 4545 - Cole Armstrong' },
+  { value: 'ViSa1', label: '**** **** **** 1212 - Jonatan Rojas' },
+  { value: 'ViSa2', label: '**** **** **** 2424 - Pedro L.' },
+  { value: 'MasterCard', label: '**** **** **** 4545 - Jose Luis' },
 ];
 
 export default function CheckoutPayment() {
@@ -109,7 +109,7 @@ export default function CheckoutPayment() {
             onClick={checkout.onBackStep}
             startIcon={<Iconify icon="eva:arrow-ios-back-fill" />}
           >
-            Back
+            Volver
           </Button>
         </Grid>
 
@@ -131,7 +131,7 @@ export default function CheckoutPayment() {
             variant="contained"
             loading={isSubmitting}
           >
-            Complete Order
+            Completas orden
           </LoadingButton>
         </Grid>
       </Grid>

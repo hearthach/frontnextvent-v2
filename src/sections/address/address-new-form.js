@@ -107,11 +107,11 @@ export default function AddressNewForm({ open, onClose, onCreate }) {
                 sm: 'repeat(2, 1fr)',
               }}
             >
-              <RHFTextField name="name" label="Full Name" />
-              <RHFTextField name="phoneNumber" label="Phone Number" />
+              <RHFTextField name="name" label="Nombres Completos" />
+              <RHFTextField name="phoneNumber" label="Celular" />
             </Box>
 
-            <RHFTextField name="address" label="Address" />
+            <RHFTextField name="address" label="Dirección" />
 
             <Box
               rowGap={3}
@@ -122,36 +122,11 @@ export default function AddressNewForm({ open, onClose, onCreate }) {
                 sm: 'repeat(3, 1fr)',
               }}
             >
-              <RHFTextField name="city" label="Town / City" />
-              <RHFTextField name="state" label="State" />
-              <RHFTextField name="zipCode" label="Zip/Code" />
+              <RHFTextField name="city" label="Ciudad" />
+              <RHFTextField name="state" label="Región" />
+              <RHFTextField name="zipCode" label="Código Postal" />
             </Box>
 
-            <RHFAutocomplete
-              name="country"
-              label="Country"
-              options={countries.map((country) => country.label)}
-              getOptionLabel={(option) => option}
-              renderOption={(props, option) => {
-                const { code, label, phone } = countries.filter(
-                  (country) => country.label === option
-                )[0];
-                if (!label) {
-                  return null;
-                }
-                return (
-                  <li {...props} key={label}>
-                    <Iconify
-                      key={label}
-                      icon={`circle-flags:${code.toLowerCase()}`}
-                      width={28}
-                      sx={{ mr: 1 }}
-                    />
-                    {label} ({code}) +{phone}
-                  </li>
-                );
-              }}
-            />
             <Box
               rowGap={3}
               columnGap={2}
@@ -161,6 +136,31 @@ export default function AddressNewForm({ open, onClose, onCreate }) {
                 sm: 'repeat(2, 1fr)',
               }}
             >
+              <RHFAutocomplete
+                name="country"
+                label="País"
+                options={countries.map((country) => country.label)}
+                getOptionLabel={(option) => option}
+                renderOption={(props, option) => {
+                  const { code, label, phone } = countries.filter(
+                    (country) => country.label === option
+                  )[0];
+                  if (!label) {
+                    return null;
+                  }
+                  return (
+                    <li {...props} key={label}>
+                      <Iconify
+                        key={label}
+                        icon={`circle-flags:${code.toLowerCase()}`}
+                        width={28}
+                        sx={{ mr: 1 }}
+                      />
+                      {label} ({code}) +{phone}
+                    </li>
+                  );
+                }}
+              />
               <RHFTextField name="email" label="Correo Electrónico" />
 
               <Autocomplete
@@ -172,17 +172,17 @@ export default function AddressNewForm({ open, onClose, onCreate }) {
               />
               <RHFTextField name="documentValue" label="Número de Documento" />
             </Box>
-            <RHFCheckbox name="primary" label="Use this address as default." />
+            <RHFCheckbox name="primary" label="Usar dirección por defecto." />
           </Stack>
         </DialogContent>
 
         <DialogActions>
           <Button color="inherit" variant="outlined" onClick={onClose}>
-            Cancel
+            Cancelar
           </Button>
 
           <LoadingButton type="submit" variant="contained" loading={isSubmitting}>
-            Deliver to this Address
+            Entregar a esta dirección
           </LoadingButton>
         </DialogActions>
       </FormProvider>

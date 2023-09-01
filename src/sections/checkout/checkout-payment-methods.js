@@ -27,7 +27,7 @@ export default function CheckoutPaymentMethods({ options, cardOptions, ...other 
   return (
     <>
       <Card {...other}>
-        <CardHeader title="Payment" />
+        <CardHeader title="Método de Pago" />
 
         <Controller
           name="payment"

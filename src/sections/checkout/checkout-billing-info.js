@@ -14,10 +14,10 @@ export default function CheckoutBillingInfo({ billing, onBackStep }) {
   return (
     <Card sx={{ mb: 3 }}>
       <CardHeader
-        title="Address"
+        title="Dirección"
         action={
           <Button size="small" startIcon={<Iconify icon="solar:pen-bold" />} onClick={onBackStep}>
-            Edit
+            Editar
           </Button>
         }
       />

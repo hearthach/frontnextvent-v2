@@ -35,7 +35,7 @@ export default function CheckoutSummary({
         action={
           onEdit && (
             <Button size="small" onClick={onEdit} startIcon={<Iconify icon="solar:pen-bold" />}>
-              Edit
+              Editar
             </Button>
           )
         }
@@ -75,7 +75,7 @@ export default function CheckoutSummary({
                 {fCurrency(total)}
               </Typography>
               <Typography variant="caption" sx={{ fontStyle: 'italic' }}>
-                (IGV incluido si corresponde)
+                (*IGV incluido si corresponde)
               </Typography>
             </Box>
           </Stack>

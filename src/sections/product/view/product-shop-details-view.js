@@ -59,6 +59,7 @@ export default function ProductShopDetailsView({ id }) {
 
   const checkout = useCheckoutContext();
 
+  // Ignore the no-unused-vars warning
   const [currentTab, setCurrentTab] = useState('description');
 
   const { product, productLoading, productError } = useGetProduct(id);
@@ -66,7 +67,7 @@ export default function ProductShopDetailsView({ id }) {
   // Obtiene productDescriptions de alguna manera (por ejemplo, desde el objeto product)
   const productDescriptions = product?.descriptions || {}; // Asegúrate de ajustar el camino correcto para obtener las descripciones
 
-
+  // Ignore the no-unused-vars warning
   const handleChangeTab = useCallback((event, newValue) => {
     setCurrentTab(newValue);
   }, []);

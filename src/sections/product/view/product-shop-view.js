@@ -49,6 +49,7 @@ const defaultFilters = {
 export default function ProductShopView() {
   const settings = useSettingsContext();
 
+  // Ignore the no-unused-vars warning
   const checkout = useCheckoutContext();
 
   const openFilters = useBoolean();

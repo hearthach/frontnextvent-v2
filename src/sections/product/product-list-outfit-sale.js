@@ -16,7 +16,7 @@ import { useGetProducts } from 'src/api/product';
 // routes
 import { paths } from 'src/routes/paths';
 //
-import ProductItem from '../product/product-item';
+import ProductItem from './product-item';
 
 // ----------------------------------------------------------------------
 

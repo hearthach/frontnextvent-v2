@@ -28,7 +28,6 @@ import IncrementerButton from './common/incrementer-button';
 import ProductDetailsDescription from './product-details-description';
 import ProductSizeGuide from './product-details-guia-tallas';
 
-
 // ----------------------------------------------------------------------
 
 export default function ProductDetailsSummary({
@@ -41,8 +40,10 @@ export default function ProductDetailsSummary({
 }) {
   const router = useRouter();
 
-   // Obtén la descripción del objeto product
-   const description = product.description;
+  // Destructurar las propiedades de product
+
+  // Obtén la descripción del objeto product
+  const description = product.description;
 
   const {
     id,
@@ -74,7 +75,7 @@ export default function ProductDetailsSummary({
     available,
     price,
     colors: colors[0],
-    size: sizes[4],
+    size: sizes[4], // el 4 es la posición de la talla
     quantity: available < 1 ? 0 : 1,
   };
 
@@ -181,7 +182,7 @@ export default function ProductDetailsSummary({
   );
 
   const renderDescription = (
-    <Stack >
+    <Stack>
       <Box sx={{ mt: 2 }}>
         <ProductDetailsDescription description={description} />
       </Box>
@@ -306,9 +307,7 @@ export default function ProductDetailsSummary({
   //   </Stack>
   // );
 
-  const renderLabels = (
-    (newLabel && newLabel.enabled) || (saleLabel && saleLabel.enabled)
-  ) && (
+  const renderLabels = ((newLabel && newLabel.enabled) || (saleLabel && saleLabel.enabled)) && (
     <Stack direction="row" alignItems="center" spacing={1}>
       {newLabel && newLabel.enabled && <Label color="info">{newLabel.content}</Label>}
       {saleLabel && saleLabel.enabled && <Label color="error">{saleLabel.content}</Label>}

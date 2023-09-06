@@ -26,14 +26,14 @@ const LINKS = [
     children: [
       { name: 'Acerca de', href: paths.about },
       { name: 'Contáctanos', href: paths.contact },
-      { name: 'FAQs', href: paths.faqs },
+      // { name: 'FAQs', href: paths.faqs },
     ],
   },
   {
     headline: 'Legal',
     children: [
-      { name: 'Terms and Condition', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Términos y Condiciones', href: '#' },
+      { name: 'Política de Privacidad', href: '#' },
     ],
   },
   {

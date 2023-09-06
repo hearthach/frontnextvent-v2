@@ -10,7 +10,7 @@ function ProductDescriptionExpansionPanel({ descriptionBlocks }) {
   return (
     <div>
       {descriptionBlocks.map((block, index) => (
-        <Accordion key={index}>
+        <Accordion key={index} defaultExpanded={index === 0}>
           <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
             <Typography variant="subtitle1" dangerouslySetInnerHTML={{ __html: block.split('</h6>')[0] }} />
           </AccordionSummary>

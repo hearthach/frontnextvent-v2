@@ -5,7 +5,7 @@ import { Controller, useForm } from 'react-hook-form';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import Rating from '@mui/material/Rating';
+// import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
@@ -15,7 +15,8 @@ import { formHelperTextClasses } from '@mui/material/FormHelperText';
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
 // utils
-import { fShortenNumber, fCurrency } from 'src/utils/format-number';
+// import { fShortenNumber, fCurrency } from 'src/utils/format-number';
+import { fCurrency } from 'src/utils/format-number';
 // components
 import Label from 'src/components/label';
 import Iconify from 'src/components/iconify';
@@ -25,6 +26,7 @@ import FormProvider, { RHFSelect } from 'src/components/hook-form';
 import IncrementerButton from './common/incrementer-button';
 
 import ProductDetailsDescription from './product-details-description';
+import ProductSizeGuide from './product-details-guia-tallas';
 
 
 // ----------------------------------------------------------------------
@@ -53,8 +55,8 @@ export default function ProductDetailsSummary({
     available,
     priceSale,
     saleLabel,
-    totalRatings,
-    totalReviews,
+    // totalRatings,
+    // totalReviews,
     inventoryType,
     subDescription,
   } = product;
@@ -183,6 +185,7 @@ export default function ProductDetailsSummary({
       <Box sx={{ mt: 2 }}>
         <ProductDetailsDescription description={description} />
       </Box>
+      <ProductSizeGuide /> {/* Renderiza el componente ProductSizeGuide aquí */}
     </Stack>
   );
 
@@ -289,24 +292,26 @@ export default function ProductDetailsSummary({
     </Typography>
   );
 
-  const renderRating = (
-    <Stack
-      direction="row"
-      alignItems="center"
-      sx={{
-        color: 'text.disabled',
-        typography: 'body2',
-      }}
-    >
-      <Rating size="small" value={totalRatings} precision={0.1} readOnly sx={{ mr: 1 }} />
-      {`(${fShortenNumber(totalReviews)} reviews)`}
-    </Stack>
-  );
+  // const renderRating = (
+  //   <Stack
+  //     direction="row"
+  //     alignItems="center"
+  //     sx={{
+  //       color: 'text.disabled',
+  //       typography: 'body2',
+  //     }}
+  //   >
+  //     <Rating size="small" value={totalRatings} precision={0.1} readOnly sx={{ mr: 1 }} />
+  //     {`(${fShortenNumber(totalReviews)} reviews)`}
+  //   </Stack>
+  // );
 
-  const renderLabels = (newLabel.enabled || saleLabel.enabled) && (
+  const renderLabels = (
+    (newLabel && newLabel.enabled) || (saleLabel && saleLabel.enabled)
+  ) && (
     <Stack direction="row" alignItems="center" spacing={1}>
-      {newLabel.enabled && <Label color="info">{newLabel.content}</Label>}
-      {saleLabel.enabled && <Label color="error">{saleLabel.content}</Label>}
+      {newLabel && newLabel.enabled && <Label color="info">{newLabel.content}</Label>}
+      {saleLabel && saleLabel.enabled && <Label color="error">{saleLabel.content}</Label>}
     </Stack>
   );
 
@@ -335,7 +340,7 @@ export default function ProductDetailsSummary({
 
           <Typography variant="h5">{name}</Typography>
 
-          {renderRating}
+          {/* {renderRating} */}
 
           {renderPrice}
 

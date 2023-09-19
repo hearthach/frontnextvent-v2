@@ -47,7 +47,7 @@ const defaultFilters = {
 
 // ----------------------------------------------------------------------
 
-export default function ProductJoggerShopView() {
+export default function ProductPolerasShopView() {
   const settings = useSettingsContext();
 
   const checkout = useCheckoutContext();
@@ -63,6 +63,9 @@ export default function ProductJoggerShopView() {
   const [filters, setFilters] = useState(defaultFilters);
 
   const { products, productsLoading, productsEmpty } = useGetProducts();
+
+  // Filtra los productos para mostrar solo los "POLERAS"
+  const polerasProducts = products.filter((product) => product.category === 'Poleras');
 
   const { searchResults, searchLoading } = useSearchProducts(debouncedQuery);
 
@@ -166,7 +169,7 @@ export default function ProductJoggerShopView() {
         }}
       >
         <br />
-        JOGGER - Zilex Perú
+        POLERAS - Zilex Perú
       </Typography>
 
       <Stack
@@ -182,7 +185,9 @@ export default function ProductJoggerShopView() {
 
       {(notFound || productsEmpty) && renderNotFound}
 
-      <ProductList products={dataFiltered} loading={productsLoading} />
+      {/* Renderiza la lista de productos "POLERAS" */}
+      <ProductList products={polerasProducts} loading={productsLoading} />
+      {/* <ProductList products={dataFiltered} loading={productsLoading} /> */}
       {/* <ProductList
         products={dataFiltered.map((product, index) => ({
           ...product,

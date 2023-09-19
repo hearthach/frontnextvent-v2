@@ -131,7 +131,7 @@ export default function CheckoutPayment() {
             variant="contained"
             loading={isSubmitting}
           >
-            Completas orden
+            Completar Orden
           </LoadingButton>
         </Grid>
       </Grid>

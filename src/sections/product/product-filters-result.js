@@ -48,7 +48,7 @@ export default function ProductFiltersResult({
       <Box sx={{ typography: 'body2' }}>
         <strong>{results}</strong>
         <Box component="span" sx={{ color: 'text.secondary', ml: 0.25 }}>
-          results found
+          resultados encontrados
         </Box>
       </Box>
 
@@ -100,7 +100,7 @@ export default function ProductFiltersResult({
           <Block label="Price:">
             <Chip
               size="small"
-              label={`$${filters.priceRange[0]} - ${filters.priceRange[1]}`}
+              label={`S/.${filters.priceRange[0]} - ${filters.priceRange[1]}`}
               onDelete={handleRemovePrice}
             />
           </Block>
@@ -118,7 +118,7 @@ export default function ProductFiltersResult({
             onClick={onResetFilters}
             startIcon={<Iconify icon="solar:trash-bin-trash-bold" />}
           >
-            Clear
+            Limpiar
           </Button>
         )}
       </Stack>

@@ -1,5 +1,5 @@
 // sections
-import ProductJoggerShopView from "src/sections/product/category/jogger/view/product-shop-view";
+import ProductJoggerShopView from "src/sections/product/category/jogger/view/product-jogger-shop-view";
 
 // ----------------------------------------------------------------------
 

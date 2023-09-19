@@ -15,13 +15,13 @@ const subheaderStyle = {
 export const navConfig = [
   {
     title: 'Inicio',
-    icon: <Iconify icon="solar:home-2-bold-duotone" />,
+    icon: <Iconify icon="line-md:home-md-twotone" />, // solar:home-2-bold-duotone
     path: '/',
   },  
   {
     title: 'Tienda',
     path: '/pages',
-    icon: <Iconify icon="solar:file-bold-duotone" />,
+    icon: <Iconify icon="material-symbols:store" />,
     children: [
       {
         subheader: (
@@ -105,8 +105,13 @@ export const navConfig = [
     ],
   },
   {
+    title: 'Tienda-Test',
+    icon: <Iconify icon="material-symbols:store" />, // solar:home-2-bold-duotone
+    path: '/prueba',
+  },  
+  {
     title: 'Contáctanos',
-    icon: <Iconify icon="solar:home-2-bold-duotone" />,
+    icon: <Iconify icon="mdi:contact" />,
     path: '/contact-us',
   },
 ];

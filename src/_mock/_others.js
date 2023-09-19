@@ -136,7 +136,7 @@ export const _socials = [
     name: 'WhatsApp',
     icon: 'logos:whatsapp-icon',  // Puedes cambiar el icono según la biblioteca que uses
     color: '#25d33b',  // Puedes usar el color característico de WhatsApp
-    path: 'https://wa.me/1234567890',  // Cambia esto al enlace de tu número de WhatsApp
+    path: 'https://wa.me/+51980589089',  // Cambia esto al enlace de tu número de WhatsApp
   },
 ];
 

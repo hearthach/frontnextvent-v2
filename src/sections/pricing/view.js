@@ -11,6 +11,8 @@ import { _pricingPlans } from 'src/_mock';
 //
 import PricingCard from './pricing-card';
 
+import MainLayout from 'src/layouts/main';
+
 // ----------------------------------------------------------------------
 
 const arrow = (
@@ -30,58 +32,60 @@ const arrow = (
 
 export default function PricingView() {
   return (
-    <Container
-      sx={{
-        pt: 15,
-        pb: 10,
-        minHeight: 1,
-      }}
-    >
-      <Typography variant="h3" align="center" sx={{ mb: 2 }}>
-        Flexible plans for your
-        <br /> {`community's size and needs`}
-      </Typography>
-
-      <Typography align="center" sx={{ color: 'text.secondary' }}>
-        Choose your plan and make modern online conversation magic
-      </Typography>
-
-      <Box sx={{ mt: 9, mb: 5, position: 'relative' }}>
-        <Stack direction="row" alignItems="center" justifyContent="center">
-          <Typography variant="overline">MONTHLY</Typography>
-
-          <Switch sx={{ mx: 1 }} />
-
-          <Box sx={{ position: 'relative' }}>
-            <Stack direction="row" sx={{ position: 'absolute', left: 12, bottom: 12 }}>
-              {arrow}
-              <Box
-                component="span"
-                sx={{
-                  whiteSpace: 'nowrap',
-                  color: 'success.main',
-                  typography: 'overline',
-                }}
-              >
-                save 10%
-              </Box>
-            </Stack>
-
-            <Typography variant="overline">YEARLY</Typography>
-          </Box>
-        </Stack>
-      </Box>
-
-      <Box
-        gap={{ xs: 3, md: 0 }}
-        display="grid"
-        alignItems={{ md: 'center' }}
-        gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
+    <MainLayout>
+      <Container
+        sx={{
+          pt: 15,
+          pb: 10,
+          minHeight: 1,
+        }}
       >
-        {_pricingPlans.map((card, index) => (
-          <PricingCard key={card.subscription} card={card} index={index} />
-        ))}
-      </Box>
-    </Container>
+        <Typography variant="h3" align="center" sx={{ mb: 2 }}>
+          Flexible plans for your
+          <br /> {`community's size and needs`}
+        </Typography>
+
+        <Typography align="center" sx={{ color: 'text.secondary' }}>
+          Choose your plan and make modern online conversation magic
+        </Typography>
+
+        <Box sx={{ mt: 9, mb: 5, position: 'relative' }}>
+          <Stack direction="row" alignItems="center" justifyContent="center">
+            <Typography variant="overline">MONTHLY</Typography>
+
+            <Switch sx={{ mx: 1 }} />
+
+            <Box sx={{ position: 'relative' }}>
+              <Stack direction="row" sx={{ position: 'absolute', left: 12, bottom: 12 }}>
+                {arrow}
+                <Box
+                  component="span"
+                  sx={{
+                    whiteSpace: 'nowrap',
+                    color: 'success.main',
+                    typography: 'overline',
+                  }}
+                >
+                  save 10%
+                </Box>
+              </Stack>
+
+              <Typography variant="overline">YEARLY</Typography>
+            </Box>
+          </Stack>
+        </Box>
+
+        <Box
+          gap={{ xs: 3, md: 0 }}
+          display="grid"
+          alignItems={{ md: 'center' }}
+          gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
+        >
+          {_pricingPlans.map((card, index) => (
+            <PricingCard key={card.subscription} card={card} index={index} />
+          ))}
+        </Box>
+      </Container>
+    </MainLayout>
   );
 }

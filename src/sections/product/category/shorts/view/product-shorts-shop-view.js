@@ -47,7 +47,7 @@ const defaultFilters = {
 
 // ----------------------------------------------------------------------
 
-export default function ProductPolosShopView() {
+export default function ProductShortsShopView() {
   const settings = useSettingsContext();
 
   const checkout = useCheckoutContext();
@@ -63,6 +63,9 @@ export default function ProductPolosShopView() {
   const [filters, setFilters] = useState(defaultFilters);
 
   const { products, productsLoading, productsEmpty } = useGetProducts();
+
+  // Filtra los productos para mostrar solo los "SHORTS"
+  const shortsProducts = products.filter((product) => product.category === 'Shorts');
 
   const { searchResults, searchLoading } = useSearchProducts(debouncedQuery);
 
@@ -166,7 +169,7 @@ export default function ProductPolosShopView() {
         }}
       >
         <br />
-        POLOS - Zilex Perú
+        SHORTS - Zilex Perú
       </Typography>
 
       <Stack
@@ -182,7 +185,10 @@ export default function ProductPolosShopView() {
 
       {(notFound || productsEmpty) && renderNotFound}
 
-      <ProductList products={dataFiltered} loading={productsLoading} />
+      {/* Renderiza la lista de productos "SHORTS" */}
+      <ProductList products={shortsProducts} loading={productsLoading} />
+
+      {/* <ProductList products={dataFiltered} loading={productsLoading} /> */}
       {/* <ProductList
         products={dataFiltered.map((product, index) => ({
           ...product,

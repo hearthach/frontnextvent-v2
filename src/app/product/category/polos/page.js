@@ -1,5 +1,5 @@
 // sections
-import ProductPolosShopView from "src/sections/product/category/polos/view/product-shop-view";
+import ProductPolosShopView from "src/sections/product/category/polos/view/product-polos-shop-view";
 
 // ----------------------------------------------------------------------
 

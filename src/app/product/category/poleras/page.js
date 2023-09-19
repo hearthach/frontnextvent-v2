@@ -1,5 +1,5 @@
 // sections
-import ProductPolerasShopView from "src/sections/product/category/poleras/view/product-shop-view";
+import ProductPolerasShopView from "src/sections/product/category/poleras/view/product-poleras-shop-view";
 
 // ----------------------------------------------------------------------
 

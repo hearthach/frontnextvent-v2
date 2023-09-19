@@ -28,20 +28,19 @@ export default function CheckoutOrderComplete({ open, onReset, onDownloadPDF }) 
         px: { xs: 2, sm: 0 },
       }}
     >
-      <Typography variant="h4">Thank you for your purchase!</Typography>
+      <Typography variant="h4">¡Gracias por tu compra!</Typography>
 
       <OrderCompleteIllustration sx={{ height: 260 }} />
 
       <Typography>
-        Thanks for placing order
+        Gracias por realizar tu pedido.
         <br />
         <br />
         <Link>01dc1370-3df6-11eb-b378-0242ac130002</Link>
         <br />
-        <br />
-        We will send you a notification within 5 days when it ships.
-        <br /> If you have any question or queries then fell to get in contact us. <br /> <br />
-        All the best,
+        Te enviaremos una notificación en un plazo de 2 días cuando se envíe.
+        <br /> Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros. <br /> <br />
+        ¡Te deseamos todo lo mejor!
       </Typography>
 
       <Divider sx={{ borderStyle: 'dashed' }} />

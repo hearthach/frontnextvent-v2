@@ -6,12 +6,12 @@ import Radio from '@mui/material/Radio';
 import Stack from '@mui/material/Stack';
 import Badge from '@mui/material/Badge';
 import Drawer from '@mui/material/Drawer';
-import Rating from '@mui/material/Rating';
+// import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import Slider from '@mui/material/Slider';
 import Divider from '@mui/material/Divider';
 import Tooltip from '@mui/material/Tooltip';
-import Checkbox from '@mui/material/Checkbox';
+// import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -35,14 +35,14 @@ export default function ProductFilters({
   onResetFilters,
   //
   colorOptions,
-  genderOptions,
-  ratingOptions,
+  // genderOptions,
+  // ratingOptions,
   categoryOptions,
 }) {
   const marksLabel = [...Array(21)].map((_, index) => {
     const value = index * 10;
 
-    const firstValue = index === 0 ? `$${value}` : `${value}`;
+    const firstValue = index === 0 ? `S/.${value}` : `${value}`;
 
     return {
       value,
@@ -113,25 +113,25 @@ export default function ProductFilters({
     </Stack>
   );
 
-  const renderGender = (
-    <Stack>
-      <Typography variant="subtitle2" sx={{ mb: 1 }}>
-        Género
-      </Typography>
-      {genderOptions.map((option) => (
-        <FormControlLabel
-          key={option.value}
-          control={
-            <Checkbox
-              checked={filters.gender.includes(option.label)}
-              onClick={() => handleFilterGender(option.label)}
-            />
-          }
-          label={option.label}
-        />
-      ))}
-    </Stack>
-  );
+  // const renderGender = (
+  //   <Stack>
+  //     <Typography variant="subtitle2" sx={{ mb: 1 }}>
+  //       Género
+  //     </Typography>
+  //     {genderOptions.map((option) => (
+  //       <FormControlLabel
+  //         key={option.value}
+  //         control={
+  //           <Checkbox
+  //             checked={filters.gender.includes(option.label)}
+  //             onClick={() => handleFilterGender(option.label)}
+  //           />
+  //         }
+  //         label={option.label}
+  //       />
+  //     ))}
+  //   </Stack>
+  // );
 
   const renderCategory = (
     <Stack>
@@ -200,33 +200,33 @@ export default function ProductFilters({
     </Stack>
   );
 
-  const renderRating = (
-    <Stack spacing={2} alignItems="flex-start">
-      <Typography variant="subtitle2">Calificación</Typography>
+  // const renderRating = (
+  //   <Stack spacing={2} alignItems="flex-start">
+  //     <Typography variant="subtitle2">Calificación</Typography>
 
-      {ratingOptions.map((item, index) => (
-        <Stack
-          key={item}
-          direction="row"
-          onClick={() => handleFilterRating(item)}
-          sx={{
-            borderRadius: 1,
-            cursor: 'pointer',
-            typography: 'body2',
-            '&:hover': { opacity: 0.48 },
-            ...(filters.rating === item && {
-              pl: 0.5,
-              pr: 0.75,
-              py: 0.25,
-              bgcolor: 'action.selected',
-            }),
-          }}
-        >
-          <Rating readOnly value={4 - index} sx={{ mr: 1 }} /> & Up
-        </Stack>
-      ))}
-    </Stack>
-  );
+  //     {ratingOptions.map((item, index) => (
+  //       <Stack
+  //         key={item}
+  //         direction="row"
+  //         onClick={() => handleFilterRating(item)}
+  //         sx={{
+  //           borderRadius: 1,
+  //           cursor: 'pointer',
+  //           typography: 'body2',
+  //           '&:hover': { opacity: 0.48 },
+  //           ...(filters.rating === item && {
+  //             pl: 0.5,
+  //             pr: 0.75,
+  //             py: 0.25,
+  //             bgcolor: 'action.selected',
+  //           }),
+  //         }}
+  //       >
+  //         <Rating readOnly value={4 - index} sx={{ mr: 1 }} /> & Up
+  //       </Stack>
+  //     ))}
+  //   </Stack>
+  // );
 
   return (
     <>
@@ -260,7 +260,7 @@ export default function ProductFilters({
 
         <Scrollbar sx={{ px: 2.5, py: 3 }}>
           <Stack spacing={3}>
-            {renderGender}
+            {/* {renderGender} */}
 
             {renderCategory}
 
@@ -268,7 +268,7 @@ export default function ProductFilters({
 
             {renderPrice}
 
-            {renderRating}
+            {/* {renderRating} */}
           </Stack>
         </Scrollbar>
       </Drawer>
